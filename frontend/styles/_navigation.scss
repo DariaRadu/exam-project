@@ -1,0 +1,19 @@
+nav{
+    border-top:7px solid $eerieBlack;
+    font-size:25px;
+    font-family: $Lato;
+    color:$eerieBlack;
+    background-color:transparent;
+    box-shadow: none;
+    ul{
+        display:flex;
+        justify-content: space-around;
+        li{
+            cursor:pointer;
+        }
+    }
+}
+
+.nav-active{
+    border-top:7px solid $eerieBlack;
+}

@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color:$babyPowder;
+}
+
+.center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-general{
+    background-color:$aliceBlue;
+    box-shadow:none;
+    border-radius:10px;
+    color:black;
+    border:1px solid $pastelBlue;
+    &:hover, &:focus {
+        @extend .btn-general;   
+    }
+}
+
+.btn-active{
+    background-color:$pastelBlue;
+    &:hover, &:focus {
+        @extend .btn-active;   
+    }
+}

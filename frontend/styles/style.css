@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans");
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #F9FCF8; }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.btn-general, .btn-general:hover, .btn-general:focus {
+  background-color: #EAF9F9;
+  box-shadow: none;
+  border-radius: 10px;
+  color: black;
+  border: 1px solid #A8CCCA; }
+
+.btn-active, .btn-active:hover, .btn-active:focus {
+  background-color: #A8CCCA; }
+
+nav {
+  border-top: 7px solid #12181e;
+  font-size: 25px;
+  font-family: "Lato", sans-serif;
+  color: #12181e;
+  background-color: transparent;
+  box-shadow: none; }
+  nav ul {
+    display: flex;
+    justify-content: space-around; }
+    nav ul li {
+      cursor: pointer; }
+
+.nav-active {
+  border-top: 7px solid #12181e; }
+
+#filter-box {
+  padding-top: 5vh; }
+  #filter-box #box {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    height: 20vh;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75); }
+    #filter-box #box .sort {
+      display: flex;
+      padding-left: 5vh; }
+      #filter-box #box .sort p {
+        margin: 0;
+        font-size: 20px; }
+      #filter-box #box .sort button {
+        margin-left: 5px; }
+  #filter-box .tabs {
+    display: flex;
+    width: 80vw;
+    justify-content: space-around;
+    background-color: transparent; }
+  #filter-box .tab {
+    width: 30vw;
+    color: white;
+    cursor: pointer;
+    background-color: #A8CCCA;
+    -webkit-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75); }
+  #filter-box .active-tab {
+    color: black;
+    background-color: white; }
+  #filter-box .search-box #search-event {
+    background-color: #DAE2E5;
+    width: 20vw;
+    border-radius: 20px;
+    padding-left: 5px; }
+  #filter-box .search-box .input-field {
+    margin-top: 0; }
+  #filter-box .search-box label {
+    float: right; }
+
+/*# sourceMappingURL=style.css.map */

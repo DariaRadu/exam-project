@@ -4,12 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>TechSnacks</title>
 </head>
 <body>
+    <nav id="navigation">
+        <ul>
+            <li class="nav-active">EVENTS</li>
+            <li>STAFF</li>
+            <li>PARTNERS</li>
+            <li>STATS</li>
+            <li><i class="material-icons">settings</i></li>
+            <li>NAME</li>
+        </ul>
+    </nav>
+
+
+    <section id="filter-box">
+        <div class="tabs">
+            <div class="tab active-tab">
+                <h5>UPCOMING EVENTS</h5>
+            </div>
+            <div class="tab">
+                <h5>OLD EVENTS</h5>
+            </div>
+        </div>
+        <div id="box">
+            <div class="sort">
+                <p>SORT BY:</p>
+                <button class="btn btn-general btn-active">DATE</button>
+                <button class="btn btn-general">NAME</button>
+                <button class="btn btn-general">LOCATION</button>
+            </div>
+            <div class="search-box">
+                    <form>
+                    <div class="input-field">
+                      <input id="search-event" type="search" placeholder="search" required>
+                      <!-- <label class="label-icon" for="search"><i class="material-icons">search</i></label> -->
+                    </div>
+            </div>
+        </div>
+    </section>
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>
