@@ -179,9 +179,29 @@ nav {
   #event-cards img {
     height: 25vh;
     object-fit: cover; }
+  #event-cards .card-buttons {
+    position: absolute;
+    padding: 2px;
+    top: 5px;
+    right: 1vw;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.6); }
+    #event-cards .card-buttons i {
+      color: white;
+      font-size: 30px;
+      padding: 0 2px;
+      cursor: pointer; }
+  #event-cards .modal-content {
+    display: flex;
+    justify-content: space-between; }
+    #event-cards .modal-content div {
+      width: 50%; }
   #event-cards .card-action {
     display: flex;
     justify-content: space-around;
     align-items: center; }
+  #event-cards #mapEvent {
+    width: 25vh;
+    height: 25vh; }
 
 /*# sourceMappingURL=style.css.map */

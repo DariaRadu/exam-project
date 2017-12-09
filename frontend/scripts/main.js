@@ -26,3 +26,12 @@ document.getElementById("btnLogin").addEventListener("click", function(){
     }
 
 });
+
+//MAP
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('mapEvent'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
+}

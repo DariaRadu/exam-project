@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <div id="loginPage" class="active">
+  <div id="loginPage" class="destroy">
             <img class="loginLogo" src="photo/ID_logo_text.png" alt="logo" >
             <form id="frmLogin" class="col s12 form">
                     <div class="row">
@@ -34,7 +34,7 @@
             
     </div>
 
-    <div id="dashboard" class="destroy">
+    <div id="dashboard" class="active">
         <nav id="navigation">
             <ul>
                 <li class="nav-active">EVENTS</li>
@@ -97,6 +97,10 @@
                         <div class="card">
                             <div class="card-image">
                                 <img src="photo/ID_logo.png">
+                                <div class="card-buttons">
+                                    <i class="material-icons">edit</i>
+                                    <i class="material-icons">delete</i>
+                                </div>
                             </div>
                             <div class="card-content">
                                 <span class="card-title">Tech Event 1</span>
@@ -113,10 +117,16 @@
                             <div class="modal-content">
                                 <div class="left">
                                     <img src="photo/ID_logo.png">
+                                    <div id="mapEvent"></div>
                                 </div>
                                 <div class="right">
                                     <h4>Tech Event 1</h4>
-                                    <p>A bunch of text</p>
+                                    <h5><em>01.01.2018 15:00</em></h5>
+                                    <h5><em>Lygten 16, NV</em></h5>
+                                    <h5><em>Price:50dkk</em></h5>
+                                    <h5><em><strong>Speakers:John Smith</strong></em></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                    <h5>10/100 places left</h5>
                                 </div>
                              </div>
                         </div>   
@@ -141,6 +151,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNQoDXesV_3aMKy6akPXYNd-ysoTQjPcE&callback=initMap"
+    async defer></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>
