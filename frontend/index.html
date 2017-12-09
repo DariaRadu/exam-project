@@ -17,7 +17,7 @@
             <form id="frmLogin" class="col s12 form">
                     <div class="row">
                             <div class="input-field col s12">
-                              <input id="email" type="email" class="validate">
+                              <input id="email" type="email" class="validate" value="admin@gmail.com">
                               <label for="email">User Email</label>
                             </div>
                           </div>
@@ -37,11 +37,11 @@
     <div id="dashboard" class="active">
         <nav id="navigation">
             <ul>
-                <li class="nav-active">EVENTS</li>
-                <li>STAFF</li>
-                <li>PARTNERS</li>
-                <li>STATS</li>
-                <li><i class="material-icons">settings</i></li>
+                <li data-page="eventsPage" data-nav="navEvents" id="navEvents" class="nav nav-active">EVENTS</li>
+                <li data-page="staffPage" data-nav="navStaff" id="navStaff" class="nav">STAFF</li>
+                <li data-page="partnersPage" data-nav="navPartners" id="navPartners" class="nav">PARTNERS</li>
+                <li data-page="statsPage" data-nav="navStats" id="navStats" class="nav">STATS</li>
+                <li id="navSettings"><i class="material-icons">settings</i></li>
                 <li>NAME</li>
             </ul>
         </nav>
@@ -134,17 +134,17 @@
             </div>
 
             <!-- STAFF PAGE -->
-            <div id="staffPage">
+            <div id="staffPage" class="page">
 
             </div>
 
             <!-- PARTNERS PAGE -->
-            <div id="partnersPage">
+            <div id="partnersPage" class="page">
                     
             </div>
 
             <!-- STATS PAGE -->
-            <div id="statsPage">
+            <div id="statsPage" class="page">
 
             </div>
     </div>
