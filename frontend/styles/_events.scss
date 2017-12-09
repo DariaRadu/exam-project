@@ -1,0 +1,16 @@
+#event-cards{
+    width:90vw;
+    margin:0 auto;
+    padding-top:2vh;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    img{
+        height:25vh;
+        object-fit: cover;
+    }
+    .card-action{
+        display:flex;
+        justify-content: space-around;
+        align-items:center;
+    }
+}
