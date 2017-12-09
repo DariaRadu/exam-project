@@ -6,6 +6,18 @@ body{
     background-color:$babyPowder;
 }
 
+h1,h2,h3,h4,h5,h6{
+    font-family:$Lato;
+}
+
+p{
+    font-family: $openSans
+}
+
+.cursor-pointer{
+    cursor:pointer;
+}
+
 .center{
     display:flex;
     justify-content: center;

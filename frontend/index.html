@@ -11,6 +11,8 @@
     <title>TechSnacks</title>
 </head>
 <body>
+
+<!-- Menu -->
     <nav id="navigation">
         <ul>
             <li class="nav-active">EVENTS</li>
@@ -22,7 +24,7 @@
         </ul>
     </nav>
 
-
+<!-- Filter Box Section -->
     <section id="filter-box">
         <div class="tabs">
             <div class="tab active-tab">
@@ -33,19 +35,37 @@
             </div>
         </div>
         <div id="box">
-            <div class="sort">
-                <p>SORT BY:</p>
-                <button class="btn btn-general btn-active">DATE</button>
-                <button class="btn btn-general">NAME</button>
-                <button class="btn btn-general">LOCATION</button>
+            <div class="first-line">
+                    <div class="sort">
+                            <p>SORT BY:</p>
+                            <button class="btn btn-general btn-active">DATE</button>
+                            <button class="btn btn-general">NAME</button>
+                            <button class="btn btn-general">LOCATION</button>
+                        </div>
+                        <div class="search-box">
+                            <form>
+                                <div>
+                                    <i class="material-icons">search</i>
+                                    <input id="search-event" type="search" required>
+                                </div>
+                            </form>
+                        </div>
             </div>
-            <div class="search-box">
-                    <form>
-                    <div class="input-field">
-                      <input id="search-event" type="search" placeholder="search" required>
-                      <!-- <label class="label-icon" for="search"><i class="material-icons">search</i></label> -->
-                    </div>
+            <div class="second-line">
+                <div class="asc-desc">
+                        <div class="input-field">
+                            <select>
+                                <option value="1" selected>Ascending</option>
+                                <option value="2">Descending</option>
+                            </select>
+                        </div>
+                </div>
+                <div class="clear-filter">
+                    <p>CLEAR FILTER</p>
+                    <i class="material-icons cursor-pointer">cancel</i>
+                </div>
             </div>
+            
         </div>
     </section>
     

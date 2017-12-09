@@ -5,6 +5,15 @@
 body {
   background-color: #F9FCF8; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", sans-serif; }
+
+p {
+  font-family: "Open Sans", sans-serif; }
+
+.cursor-pointer {
+  cursor: pointer; }
+
 .center {
   display: flex;
   justify-content: center;
@@ -39,24 +48,41 @@ nav {
 #filter-box {
   padding-top: 5vh; }
   #filter-box #box {
-    display: flex;
-    justify-content: space-between;
     width: 90vw;
-    height: 20vh;
+    /* height:20vh; */
     padding: 20px;
     background-color: white;
     margin: 0 auto;
     -webkit-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75); }
+    #filter-box #box .first-line {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
     #filter-box #box .sort {
       display: flex;
+      flex-wrap: wrap;
       padding-left: 5vh; }
       #filter-box #box .sort p {
         margin: 0;
         font-size: 20px; }
       #filter-box #box .sort button {
         margin-left: 5px; }
+    #filter-box #box .second-line {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      #filter-box #box .second-line .asc-desc {
+        width: 30vw; }
+        #filter-box #box .second-line .asc-desc input {
+          margin: 0; }
+      #filter-box #box .second-line .clear-filter {
+        display: flex;
+        align-items: center; }
+        #filter-box #box .second-line .clear-filter p {
+          margin: 0;
+          font-size: 17px; }
   #filter-box .tabs {
     display: flex;
     width: 80vw;
@@ -73,14 +99,22 @@ nav {
   #filter-box .active-tab {
     color: black;
     background-color: white; }
-  #filter-box .search-box #search-event {
-    background-color: #DAE2E5;
-    width: 20vw;
-    border-radius: 20px;
-    padding-left: 5px; }
-  #filter-box .search-box .input-field {
-    margin-top: 0; }
-  #filter-box .search-box label {
-    float: right; }
+  #filter-box .search-box form {
+    width: 20vw; }
+    #filter-box .search-box form div {
+      background-color: #DAE2E5;
+      border-radius: 30px;
+      padding: 3px 10px 0 10px;
+      display: flex;
+      /* label underline focus color */ }
+      #filter-box .search-box form div i {
+        font-size: 2em; }
+      #filter-box .search-box form div input {
+        margin: 2px;
+        height: 100%;
+        color: #A8CCCA; }
+      #filter-box .search-box form div input[type=search]:focus {
+        border-bottom: none;
+        box-shadow: 0 0.5px 0 0 #000; }
 
 /*# sourceMappingURL=style.css.map */
