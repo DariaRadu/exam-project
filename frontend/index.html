@@ -12,11 +12,7 @@
 </head>
 <body>
 
-<<<<<<< HEAD
-  <!-- <div id="loginPage">
-=======
   <div id="loginPage" class="active">
->>>>>>> 1b781b4ad9d60c0a6290946f566c83a917b3c3c1
             <img class="loginLogo" src="photo/ID_logo_text.png" alt="logo" >
             <form id="frmLogin" class="col s12 form">
                     <div class="row">
@@ -36,10 +32,9 @@
                     </button>  
             </form>
             
-    </div> -->
+    </div>
 
-<<<<<<< HEAD
-    <div id="dashboard">
+    <div id="dashboard" class="destroy">
         <nav id="navigation">
             <ul>
                 <li class="nav-active">EVENTS</li>
@@ -50,63 +45,51 @@
                 <li>NAME</li>
             </ul>
         </nav>
-=======
-    <div id="dashboard" class="destroy">
-    <nav id="navigation">
-        <ul>
-            <li class="nav-active">EVENTS</li>
-            <li>STAFF</li>
-            <li>PARTNERS</li>
-            <li>STATS</li>
-            <li><i class="material-icons">settings</i></li>
-            <li>NAME</li>
-        </ul>
-    </nav>
->>>>>>> 1b781b4ad9d60c0a6290946f566c83a917b3c3c1
 
-        <!-- Filter Box Section -->
+        
         <div id="eventsPage" class="page">
+            <!-- Filter Box Section -->
                 <section id="filter-box">
-                        <div class="tabs">
-                            <div class="tab active-tab">
-                                <h5>UPCOMING EVENTS</h5>
+                    <div class="tabs">
+                        <div class="tab active-tab">
+                            <h5>UPCOMING EVENTS</h5>
+                        </div>
+                        <div class="tab">
+                            <h5>OLD EVENTS</h5>
+                        </div>
+                    </div>
+                    <div id="box">
+                        <div class="first-line">
+                            <div class="sort">
+                                    <p>SORT BY:</p>
+                                    <button class="btn btn-general btn-active">DATE</button>
+                                    <button class="btn btn-general">NAME</button>
+                                    <button class="btn btn-general">LOCATION</button>
+                                </div>
+                                <div class="search-box">
+                                    <form>
+                                        <div>
+                                            <i class="material-icons">search</i>
+                                            <input id="search-event" type="search" required>
+                                        </div>
+                                    </form>
+                                </div>
+                        </div>
+                        <div class="second-line">
+                            <div class="asc-desc">
+                                <div class="input-field">
+                                    <select>
+                                        <option value="1" selected>Ascending</option>
+                                        <option value="2">Descending</option>
+                                    </select>
+                                    </div>
                             </div>
-                            <div class="tab">
-                                <h5>OLD EVENTS</h5>
+                            <div class="clear-filter">
+                                <p>CLEAR FILTER</p>
+                                <i class="material-icons cursor-pointer">cancel</i>
                             </div>
                         </div>
-                        <div id="box">
-                            <div class="first-line">
-                                    <div class="sort">
-                                            <p>SORT BY:</p>
-                                            <button class="btn btn-general btn-active">DATE</button>
-                                            <button class="btn btn-general">NAME</button>
-                                            <button class="btn btn-general">LOCATION</button>
-                                        </div>
-                                        <div class="search-box">
-                                            <form>
-                                                <div>
-                                                    <i class="material-icons">search</i>
-                                                    <input id="search-event" type="search" required>
-                                                </div>
-                                            </form>
-                                        </div>
-                            </div>
-                            <div class="second-line">
-                                <div class="asc-desc">
-                                        <div class="input-field">
-                                            <select>
-                                                <option value="1" selected>Ascending</option>
-                                                <option value="2">Descending</option>
-                                            </select>
-                                        </div>
-                                </div>
-                                <div class="clear-filter">
-                                    <p>CLEAR FILTER</p>
-                                    <i class="material-icons cursor-pointer">cancel</i>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
                     </section>
             
                     <!-- Events section -->
@@ -138,7 +121,22 @@
                              </div>
                         </div>   
                     </section>
-        </div>
+            </div>
+
+            <!-- STAFF PAGE -->
+            <div id="staffPage">
+
+            </div>
+
+            <!-- PARTNERS PAGE -->
+            <div id="partnersPage">
+                    
+            </div>
+
+            <!-- STATS PAGE -->
+            <div id="statsPage">
+
+            </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->

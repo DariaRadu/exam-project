@@ -10,7 +10,8 @@
 var sCorrectAdminEmail = "admin@gmail.com";
 var sCorrectAdminPassword = "123";
 
-
+var dashboard = document.querySelector("#dashboard");
+var loginPage = document.querySelector("#loginPage");
 document.getElementById("btnLogin").addEventListener("click", function(){
     var loginFormEmail = document.getElementById("email").value;
     var loginFormPassword = document.getElementById("password").value;
