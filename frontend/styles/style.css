@@ -125,13 +125,13 @@ nav {
   margin-right: auto;
   margin-top: 10%; }
 
-.btn {
+.btnLogin {
   display: block;
   margin-left: auto;
   margin-right: auto;
   background-color: #12181e; }
 
-.btn:hover {
+.btnLogin:hover {
   background-color: #A8CCCA; }
 
 .form {
