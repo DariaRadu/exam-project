@@ -41,3 +41,11 @@ p{
         @extend .btn-active;   
     }
 }
+
+.active {
+    display: block;
+}
+
+.destroy {
+    display: none;
+}
