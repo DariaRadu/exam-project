@@ -1,18 +1,22 @@
 #filter-box{
     padding-top:5vh;
     #box{
-        display:flex;
-        justify-content:space-between;
         width:90vw;
-        height:20vh;
+        /* height:20vh; */
         padding:20px;
         background-color:white;
         margin:0 auto;
         -webkit-box-shadow: 0px 0px 22px -6px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 22px -6px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 22px -6px rgba(0,0,0,0.75);
+        .first-line{
+            display:flex;
+            justify-content:space-between;
+            flex-wrap: wrap;
+        }
         .sort{
             display:flex;
+            flex-wrap:wrap;
             //align-items: center;
             //padding-top:2vh;
             padding-left:5vh;
@@ -22,6 +26,27 @@
             }
             button{
                 margin-left:5px;
+            }
+        }
+
+        .second-line{
+            display:flex;
+            justify-content:space-between;
+            flex-wrap: wrap;
+            .asc-desc{
+                width:30vw;
+                input{
+                    margin:0;
+                }
+            }
+
+            .clear-filter{
+                display:flex;
+                align-items:center;
+                p{
+                    margin:0;
+                    font-size:17px;
+                }
             }
         }
         
@@ -49,17 +74,27 @@
     }
 
     .search-box{
-        #search-event{
-            background-color:$platinum;
+        form{
             width:20vw;
-            border-radius:20px;
-            padding-left:5px;
-        }
-        .input-field{
-            margin-top:0;
+            div{
+                background-color:$platinum;
+                border-radius:30px;
+                padding:3px 10px 0 10px;
+                display:flex;
+                i{
+                    font-size:2em;
+                }
+                input{
+                    margin:2px;
+                    height:100%;
+                    color:$pastelBlue;
+                }
+                /* label underline focus color */
+                input[type=search]:focus {
+                    border-bottom: none;
+                    box-shadow: 0 0.5px 0 0 #000;
+                }
+            }
         } 
-        label{
-            float:right;
-        }
     }
 }
