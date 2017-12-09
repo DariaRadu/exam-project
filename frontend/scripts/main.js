@@ -3,3 +3,4 @@
     //INITIALIZING SELECT
     $('select').material_select();
 });
+
