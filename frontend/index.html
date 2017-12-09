@@ -12,9 +12,9 @@
 </head>
 <body>
 
-  <div id="loginPage">
+  <div id="loginPage" class="active">
             <img class="loginLogo" src="photo/ID_logo_text.png" alt="logo" >
-            <form class="col s12 form">
+            <form id="frmLogin" class="col s12 form">
                     <div class="row">
                             <div class="input-field col s12">
                               <input id="email" type="email" class="validate">
@@ -27,7 +27,7 @@
                         <label for="password">Password</label>
                       </div>
                     </div>
-                    <button class="btn btnLogin waves-effect waves-light" type="submit" name="action">Login
+                    <button id="btnLogin" class="btn btnLogin waves-effect waves-light" type="button" name="action">Login
                             <i class="material-icons right">send</i>
                     </button>
                     
@@ -38,7 +38,7 @@
     </div> 
 
 
-    <div id="dashboard">
+    <div id="dashboard" class="destroy">
     <nav id="navigation">
         <ul>
             <li class="nav-active">EVENTS</li>

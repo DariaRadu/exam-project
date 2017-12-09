@@ -29,6 +29,12 @@ p {
 .btn-active, .btn-active:hover, .btn-active:focus {
   background-color: #A8CCCA; }
 
+.active {
+  display: block; }
+
+.destroy {
+  display: none; }
+
 nav {
   border-top: 7px solid #12181e;
   font-size: 25px;
