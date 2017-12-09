@@ -8,9 +8,36 @@
         height:25vh;
         object-fit: cover;
     }
+
+    .card-buttons{
+        position:absolute;
+        padding:2px;
+        top:5px;
+        right:1vw;
+        border-radius:15px;
+        background-color:$transparentBlack;
+        i{
+            color:white;
+            font-size:30px;
+            padding:0 2px;
+            cursor: pointer;
+        }
+    }
+    .modal-content{
+        display:flex;
+        justify-content: space-between;
+        div{
+            width:50%;
+        }
+    }
     .card-action{
         display:flex;
         justify-content: space-around;
         align-items:center;
+    }
+
+    #mapEvent{
+        width:25vh;
+        height:25vh;
     }
 }
