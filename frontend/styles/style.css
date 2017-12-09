@@ -170,4 +170,18 @@ nav {
 .input-field .prefix.active {
   color: black; }
 
+#event-cards {
+  width: 90vw;
+  margin: 0 auto;
+  padding-top: 2vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+  #event-cards img {
+    height: 25vh;
+    object-fit: cover; }
+  #event-cards .card-action {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
 /*# sourceMappingURL=style.css.map */
