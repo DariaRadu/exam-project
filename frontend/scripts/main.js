@@ -65,3 +65,32 @@ function initMap() {
     zoom: 8
   });
 }
+
+//CREATING EVENT CARDS
+const APIlink="http://localhost:3000";
+const cloudinaryLink="http://res.cloudinary.com/id-exam/image/upload/";
+var eventsCardsDiv = document.querySelector("#event-cards");
+
+$.get(APIlink+'/events', function(data){
+    var aEvents = data;
+    console.log(data);
+    for (let i=0;i<aEvents.length;i++){
+        var event=aEvents[i];
+        var eventCardTemplate=`<div class="card">
+        <div class="card-image">
+            <img src="${cloudinaryLink+event.image_src}">
+            <div class="card-buttons">
+                <i class="material-icons">edit</i>
+                <i class="material-icons">delete</i>
+            </div>
+        </div>
+        <div class="card-content">
+            <span class="card-title">${event.title}</span>
+            <p>${event.description}</p>
+        </div>
+        <div class="card-action">
+            <p>10/${event.max_participants} places left</p>
+            <button data-target="modalEvent" class="btn btn-general modal-trigger">MORE</button>`;
+        eventsCardsDiv.innerHTML+=eventCardTemplate;
+    }
+})
