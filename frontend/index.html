@@ -197,7 +197,7 @@
 
                         <!-- Modal Structure -->
                         <div id="modalEvent" class="modal">
-                            <div class="modal-content">
+                            <!-- <div class="modal-content">
                                 <div class="left">
                                     <img src="photo/ID_logo.png">
                                     <div id="mapEvent"></div>
@@ -211,7 +211,7 @@
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                                     <h5>10/100 places left</h5>
                                 </div>
-                             </div>
+                             </div> -->
                         </div>   
                     </section>
             </div>
@@ -310,14 +310,24 @@
 
             <!-- STATS PAGE -->
             <div id="statsPage" class="page">
-
+                <div class='stats-help'>
+                    <div>
+                        <h5>You are now looking at general statistics.</h5>
+                        <h5>To see statistics for a specific event, go to:</h5>
+                    </div>
+                    <div>
+                        <button class="btn btn-general">OLD EVENTS</button>
+                    </div>
+                </div>
+                <canvas id="attendanceChart"></canvas>
             </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNQoDXesV_3aMKy6akPXYNd-ysoTQjPcE&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNQoDXesV_3aMKy6akPXYNd-ysoTQjPcE"
     async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

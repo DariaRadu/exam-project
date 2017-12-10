@@ -49,3 +49,11 @@ p{
 .destroy {
     display: none;
 }
+
+.page{
+    display:none;
+}
+
+#eventsPage.page{
+    display:block;
+}

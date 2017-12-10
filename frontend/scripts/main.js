@@ -7,7 +7,10 @@
     $('#modalRegisterEvent').modal();
 });
 
+const APIlink="http://localhost:3000";
+const cloudinaryLink="http://res.cloudinary.com/id-exam/image/upload/";
 
+//LOGIN PAGE
 var sCorrectAdminEmail = "admin@gmail.com";
 var sCorrectAdminPassword = "123";
 
@@ -29,10 +32,10 @@ document.getElementById("btnLogin").addEventListener("click", function(){
 
 
 //----------------------------------------------------------------------------------------------------
-
+//NAV + CLICK EVENTS
 document.addEventListener('click', function(e){
             menuNavigation(e);
-        
+            buttonEventModal(e);
         });
 
 function menuNavigation(e){
@@ -58,6 +61,36 @@ function menuNavigation(e){
     }
 }
 
+//MODAL - get the info of a particular event
+var modalEventDiv = document.querySelector('#modalEvent');
+function buttonEventModal(e){
+    var eventId = e.target.getAttribute('data-event');
+    if(eventId){
+        eventId=Number(eventId);
+        $.get(APIlink+'/events/'+eventId, function(event){
+            console.log(event);
+            var modalEventTemplate = `<div class="modal-content">
+            <div class="left">
+                <img src="${cloudinaryLink+event.image_src}">
+                <div id="mapEvent"></div>
+            </div>
+            <div class="right">
+                <h4>${event.title}</h4>
+                <h5><em>${event.date}</em></h5>
+                <h5><em>${event.location}</em></h5>
+                <h5><em>Price:${event.entrance_fee} dkk</em></h5>
+                <h5><em><strong>Speakers:John Smith</strong></em></h5>
+                <p>${event.description}</p>
+                <h5>10/100 places left</h5>
+            </div>
+         </div>`;
+            
+            modalEventDiv.innerHTML = modalEventTemplate;
+            initMap();
+        })
+    }
+}
+
 //MAP
 var map;
 function initMap() {
@@ -68,8 +101,6 @@ function initMap() {
 }
 
 //CREATING EVENT CARDS
-const APIlink="http://localhost:3000";
-const cloudinaryLink="http://res.cloudinary.com/id-exam/image/upload/";
 var eventsCardsDiv = document.querySelector("#event-cards");
 
 $.get(APIlink+'/events', function(data){
@@ -91,7 +122,30 @@ $.get(APIlink+'/events', function(data){
         </div>
         <div class="card-action">
             <p>10/${event.max_participants} places left</p>
-            <button data-target="modalEvent" class="btn btn-general modal-trigger">MORE</button>`;
+            <button data-target="modalEvent" data-event=${event.id} class="btn btn-event btn-general modal-trigger">MORE</button>`;
         eventsCardsDiv.innerHTML+=eventCardTemplate;
     }
 })
+
+//STATS CHARTS
+var ctxAttendance = document.getElementById('attendanceChart').getContext('2d');
+var attendanceChart = new Chart(ctxAttendance, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            label: "attended",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        },
+        {
+            label: "registered",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 50]
+        }]
+    }})

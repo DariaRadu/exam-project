@@ -23,24 +23,35 @@
             cursor: pointer;
         }
     }
-    .modal-content{
-        display:flex;
-        justify-content: space-between;
-        div{
-            width:50%;
-        }
-    }
     .card-action{
         display:flex;
         justify-content: space-around;
         align-items:center;
     }
 
+}
+
+#modalEvent{
+    width:70vw;
+    .modal-content{
+        display:flex;
+        justify-content: space-between;
+        div{
+            img{
+                height:25vh;
+                object-fit: cover;
+            }
+            width:50%;
+        }
+    }
+    
     #mapEvent{
         width:25vh;
         height:25vh;
     }
 }
+<<<<<<< HEAD
+=======
 
 
 
@@ -119,3 +130,4 @@
   }
 
 }
+>>>>>>> 3e5b145f3306ea0fcf97c11832c5aae1eaab1c35
