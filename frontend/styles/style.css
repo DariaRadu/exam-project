@@ -1,68 +1,313 @@
-/*
-Error: Invalid CSS after "...2c5aae1eaab1c35": expected "{", was ""
-        on line 134 of _events.scss
-        from line 6 of style.scss
+@import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans");
+* {
+  box-sizing: border-box; }
 
-129:     box-shadow: 0 1px 0 0 $pastelBlue;
-130:   }
-131: 
-132: }
-133: >>>>>>> 3e5b145f3306ea0fcf97c11832c5aae1eaab1c35
+body {
+  background-color: #F9FCF8; }
 
-Backtrace:
-_events.scss:134
-style.scss:6
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1115:in `expected'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1110:in `tok!'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:654:in `block'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:647:in `ruleset'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:673:in `block_child'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:666:in `block_contents'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:123:in `stylesheet'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:39:in `parse'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:403:in `_to_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:309:in `to_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:471:in `on_file_changed'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:328:in `block in watch'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:252:in `call'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...2c5aae1eaab1c35\": expected \"{\", was \"\"\A         on line 134 of _events.scss\A         from line 6 of style.scss\A \A 129:     box-shadow: 0 1px 0 0 $pastelBlue;\A 130:   }\A 131: \A 132: }\A 133: >>>>>>> 3e5b145f3306ea0fcf97c11832c5aae1eaab1c35"; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", sans-serif; }
+
+p {
+  font-family: "Open Sans", sans-serif; }
+
+.cursor-pointer {
+  cursor: pointer; }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.btn-general, .btn-general:hover, .btn-general:focus {
+  background-color: #EAF9F9;
+  box-shadow: none;
+  border-radius: 10px;
+  color: black;
+  border: 1px solid #A8CCCA; }
+
+.btn-active, .btn-active:hover, .btn-active:focus {
+  background-color: #A8CCCA; }
+
+.active {
+  display: block; }
+
+.destroy {
+  display: none; }
+
+.page {
+  display: none; }
+
+#eventsPage.page {
+  display: block; }
+
+nav {
+  border-top: 7px solid #12181e;
+  font-size: 25px;
+  font-family: "Lato", sans-serif;
+  color: #12181e;
+  background-color: transparent;
+  box-shadow: none; }
+  nav ul {
+    display: flex;
+    justify-content: space-around; }
+    nav ul li {
+      cursor: pointer; }
+
+.nav-active {
+  border-top: 7px solid #12181e; }
+
+#filter-box {
+  padding-top: 5vh; }
+  #filter-box #box {
+    width: 90vw;
+    /* height:20vh; */
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75); }
+    #filter-box #box .first-line {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+    #filter-box #box .sort {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 5vh; }
+      #filter-box #box .sort p {
+        margin: 0;
+        font-size: 20px; }
+      #filter-box #box .sort button {
+        margin-left: 5px; }
+    #filter-box #box .second-line {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      #filter-box #box .second-line .asc-desc {
+        width: 30vw; }
+        #filter-box #box .second-line .asc-desc input {
+          margin: 0; }
+      #filter-box #box .second-line .clear-filter {
+        display: flex;
+        align-items: center; }
+        #filter-box #box .second-line .clear-filter p {
+          margin: 0;
+          font-size: 17px; }
+  #filter-box .tabs {
+    display: flex;
+    width: 80vw;
+    justify-content: space-around;
+    background-color: transparent; }
+  #filter-box .tab {
+    width: 30vw;
+    color: white;
+    cursor: pointer;
+    background-color: #A8CCCA;
+    -webkit-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75); }
+  #filter-box .active-tab {
+    color: black;
+    background-color: white; }
+  #filter-box .search-box form {
+    width: 20vw; }
+    #filter-box .search-box form div {
+      background-color: #DAE2E5;
+      border-radius: 30px;
+      padding: 3px 10px 0 10px;
+      display: flex;
+      /* label underline focus color */ }
+      #filter-box .search-box form div i {
+        font-size: 2em; }
+      #filter-box .search-box form div input {
+        margin: 2px;
+        height: 100%;
+        color: #A8CCCA; }
+      #filter-box .search-box form div input[type=search]:focus {
+        border-bottom: none;
+        box-shadow: 0 0.5px 0 0 #000; }
+
+.loginLogo {
+  display: block;
+  height: 50%;
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%; }
+
+.btnLogin {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #12181e; }
+
+.btnLogin:hover {
+  background-color: #A8CCCA; }
+
+.form {
+  margin-left: 40%;
+  margin-right: 40%; }
+
+.input-field label {
+  color: #000; }
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #000; }
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #200;
+  box-shadow: 0 1px 0 0 #000; }
+
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000; }
+
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000; }
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: black; }
+
+#event-cards {
+  width: 90vw;
+  margin: 0 auto;
+  padding-top: 2vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+  #event-cards img {
+    height: 25vh;
+    object-fit: cover; }
+  #event-cards .card-buttons {
+    position: absolute;
+    padding: 2px;
+    top: 5px;
+    right: 1vw;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.6); }
+    #event-cards .card-buttons i {
+      color: white;
+      font-size: 30px;
+      padding: 0 2px;
+      cursor: pointer; }
+  #event-cards .card-action {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+#modalEvent {
+  width: 70vw; }
+  #modalEvent .modal-content {
+    display: flex;
+    justify-content: space-between; }
+    #modalEvent .modal-content div {
+      width: 50%; }
+      #modalEvent .modal-content div img {
+        height: 25vh;
+        object-fit: cover; }
+  #modalEvent #mapEvent {
+    width: 25vh;
+    height: 25vh; }
+
+.add-event {
+  display: flex;
+  margin-left: 5%;
+  margin-top: 2%;
+  align-items: center; }
+  .add-event p {
+    margin: 0;
+    font-size: 17px; }
+
+.registering {
+  color: black;
+  font-size: 35px; }
+
+#submit_event {
+  position: sticky; }
+
+.formHeading {
+  text-align: center; }
+
+#modalRegisterEvent {
+  /* label color */
+  /* label focus color */
+  /* label underline focus color */
+  /* valid color */
+  /* label focus color */
+  /* label underline focus color */
+  /* valid color */
+  /* label focus color */
+  /* label underline focus color */
+  /* valid color */ }
+  #modalRegisterEvent .input-field label {
+    color: #000; }
+  #modalRegisterEvent .input-field input[type=text]:focus + label {
+    color: #A8CCCA; }
+  #modalRegisterEvent .input-field input[type=text]:focus {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+  #modalRegisterEvent .input-field input[type=text].valid {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+  #modalRegisterEvent .input-field input[type=time]:focus + label {
+    color: #A8CCCA; }
+  #modalRegisterEvent .input-field input[type=time]:focus {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+  #modalRegisterEvent .input-field input[type=time].valid {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+  #modalRegisterEvent .input-field input[type=date]:focus + label {
+    color: #A8CCCA; }
+  #modalRegisterEvent .input-field input[type=date]:focus {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+  #modalRegisterEvent .input-field input[type=date].valid {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+
+#staffBox {
+  display: flex;
+  align-items: center; }
+
+.staff-buttons {
+  top: 5px;
+  right: 1vw;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.6); }
+  .staff-buttons i {
+    color: white;
+    font-size: 30px;
+    padding: 0 2px;
+    cursor: pointer; }
+
+.box {
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90vw;
+  padding: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75); }
+
+#statsPage .stats-help {
+  width: 40vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+#statsPage canvas {
+  width: 90vw;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=style.css.map */
