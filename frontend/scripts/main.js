@@ -4,6 +4,7 @@
     $('select').material_select();
     //INITIALIZING MODAL
     $('#modalEvent').modal();
+    $('#modalRegisterEvent').modal();
 });
 
 const APIlink="http://localhost:3000";

@@ -50,3 +50,84 @@
         height:25vh;
     }
 }
+<<<<<<< HEAD
+=======
+
+
+
+.add-event{
+    display:flex;
+    margin-left: 5%;
+    margin-top: 2%;
+    align-items:center;
+    p{
+        margin:0;
+        font-size:17px;
+    }
+}
+
+.registering {
+    color: black;
+    font-size: 35px;
+}
+
+#submit_event {
+    position: sticky;
+}
+
+.formHeading {
+    text-align: center;
+}
+
+#modalRegisterEvent {
+    /* label color */
+   .input-field label {
+    color: #000;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: $pastelBlue;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+
+  /* label focus color */
+  .input-field input[type=time]:focus + label {
+    color: $pastelBlue;
+  }
+  /* label underline focus color */
+  .input-field input[type=time]:focus {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+  /* valid color */
+  .input-field input[type=time].valid {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+
+  /* label focus color */
+  .input-field input[type=date]:focus + label {
+    color: $pastelBlue;
+  }
+  /* label underline focus color */
+  .input-field input[type=date]:focus {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+  /* valid color */
+  .input-field input[type=date].valid {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+
+}
+>>>>>>> 3e5b145f3306ea0fcf97c11832c5aae1eaab1c35
