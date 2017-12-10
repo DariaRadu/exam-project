@@ -56,7 +56,6 @@ function menuNavigation(e){
         console.log(navClicked);
     }
 }
-});
 
 //MAP
 var map;
