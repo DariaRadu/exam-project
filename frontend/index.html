@@ -12,12 +12,12 @@
 </head>
 <body>
 
-  <div id="loginPage" class="active">
+  <div id="loginPage" class="destroy">
             <img class="loginLogo" src="photo/ID_logo_text.png" alt="logo" >
             <form id="frmLogin" class="col s12 form">
                     <div class="row">
                             <div class="input-field col s12">
-                              <input id="email" type="email" class="validate">
+                              <input id="email" type="email" class="validate" value="admin@gmail.com">
                               <label for="email">User Email</label>
                             </div>
                           </div>
@@ -34,14 +34,14 @@
             
     </div>
 
-    <div id="dashboard" class="destroy">
+    <div id="dashboard" class="active">
         <nav id="navigation">
             <ul>
-                <li class="nav-active">EVENTS</li>
-                <li>STAFF</li>
-                <li>PARTNERS</li>
-                <li>STATS</li>
-                <li><i class="material-icons">settings</i></li>
+                <li data-page="eventsPage" data-nav="navEvents" id="navEvents" class="nav nav-active">EVENTS</li>
+                <li data-page="staffPage" data-nav="navStaff" id="navStaff" class="nav">STAFF</li>
+                <li data-page="partnersPage" data-nav="navPartners" id="navPartners" class="nav">PARTNERS</li>
+                <li data-page="statsPage" data-nav="navStats" id="navStats" class="nav">STATS</li>
+                <li id="navSettings"><i class="material-icons">settings</i></li>
                 <li>NAME</li>
             </ul>
         </nav>
@@ -93,10 +93,21 @@
                     </section>
             
                     <!-- Events section -->
+                    <div class='add-event'>
+                        <p>ADD NEW EVENT</p>
+                        <a data-target="modalRegisterEvent" class="registering modal-trigger" > 
+                         <i class="material-icons cursor-pointer">add_circle_outline</i>   
+                        </a>
+                        
+                    </div>
                     <section id="event-cards">
                         <div class="card">
                             <div class="card-image">
                                 <img src="photo/ID_logo.png">
+                                <div class="card-buttons">
+                                    <i class="material-icons">edit</i>
+                                    <i class="material-icons">delete</i>
+                                </div>
                             </div>
                             <div class="card-content">
                                 <span class="card-title">Tech Event 1</span>
@@ -108,15 +119,97 @@
                                 <button data-target="modalEvent" class="btn btn-general modal-trigger">MORE</button>
                             </div>
                         </div>
+
+                        <!-- Event Registering Modal Structure -->
+
+                        <!-- Modal Structure -->
+                        <div id="modalRegisterEvent" class="modal modal-fixed-footer">
+                                <div class="modal-register-content">
+                                    <h1 class='formHeading'>Register Event Form</h1>
+                                        <div class="row">
+                                                <form class="col s12">
+                                                  <div class="row">
+                                                    <div class="input-field col s12">
+                                                      <input id="title" type="text" class="validate">
+                                                      <label for="title">Title</label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="input-field col s6">
+                                                      <p>On which day would the event happen?</p>
+                                                    </div>
+                                                    <div class="input-field col s6">
+                                                            <input id="date" type="date" class="validate">
+                                                            <label for="date"></label>
+                                                          </div>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="input-field col s6">
+                                                      <p>The exact time when the event starts:</p>
+                                                    </div>
+                                                    <div class="input-field col s6">
+                                                            <input id="time" type="time" class="validate">
+                                                            <label for="time"></label>
+                                                          </div>
+                                                  </div>
+                                                  <div class="row">
+                                                        <div class="input-field col s12">
+                                                          <input id="location" type="text" class="validate">
+                                                          <label for="location">Location</label>
+                                                        </div>
+                                                  </div>
+                                                  <div class="row">
+                                                        <div class="input-field col s12">
+                                                          <input id="location" type="text" class="validate">
+                                                          <label for="location">Description of Event</label>
+                                                        </div>
+                                                  </div>
+                                                  <div class="row">
+                                                        <div class="input-field col s12">
+                                                          <input id="entrance_fee" type="text" class="validate">
+                                                          <label for="entrance_fee">Entrance Fee</label>
+                                                        </div>
+                                                  </div>
+                                                  <div class="row">
+                                                        <div class="input-field col s12">
+                                                          <input id="max_participants" type="text" class="validate">
+                                                          <label for="max_participants">Maximum number of participants</label>
+                                                        </div>
+                                                  </div>
+                                                  <div class="row">
+                                                        <div class="input-field col s12">
+                                                            <p>Upload a cover photo for the event:</p>
+                                                            <input type="file" name="fileUserPicture">
+                                                        </div>
+                                                  </div>
+                                                </form>
+                                              </div>
+                                </div>
+                                <div id="submit_event" class="modal-footer">
+                                   <!-- <button id="btnLogin" class="btn btnLogin waves-effect waves-light" type="button" name="action">Login
+                                            <i class="material-icons right">send</i>
+                                     </button> -->
+                                  <button id="btnRegisterEvent" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
+                                      <a>Submit</a> </button>
+                                </div>
+                        </div>
+
+
                         <!-- Modal Structure -->
                         <div id="modalEvent" class="modal">
                             <div class="modal-content">
                                 <div class="left">
                                     <img src="photo/ID_logo.png">
+                                    <div id="mapEvent"></div>
                                 </div>
                                 <div class="right">
                                     <h4>Tech Event 1</h4>
-                                    <p>A bunch of text</p>
+                                    <h5><em>01.01.2018 15:00</em></h5>
+                                    <h5><em>Lygten 16, NV</em></h5>
+                                    <h5><em>Price:50dkk</em></h5>
+                                    <h5><em><strong>Speakers:John Smith</strong></em></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                    <h5>10/100 places left</h5>
                                 </div>
                              </div>
                         </div>   
@@ -124,23 +217,107 @@
             </div>
 
             <!-- STAFF PAGE -->
-            <div id="staffPage">
+            <div id="staffPage" class="page">
+                    <section id="filter-box">
+                            <div id="box">
+                                <div class="first-line">
+                                    <div class="sort">
+                                            <p>SORT BY:</p>
+                                            <button class="btn btn-general btn-active">NAME</button>
+                                            <button class="btn btn-general">TITLE</button>
+                                            <button class="btn btn-general">INTERESTS</button>
+                                        </div>
+                                        <div class="search-box">
+                                            <form>
+                                                <div>
+                                                    <i class="material-icons">search</i>
+                                                    <input id="search-event" type="search" required>
+                                                </div>
+                                            </form>
+                                        </div>
+                                </div>
+                                <div class="second-line">
+                                    <div class="asc-desc">
+                                        <div class="input-field">
+                                            <select>
+                                                <option value="1" selected>Ascending</option>
+                                                <option value="2">Descending</option>
+                                            </select>
+                                            </div>
+                                    </div>
+                                    <div class="clear-filter">
+                                        <p>CLEAR FILTER</p>
+                                        <i class="material-icons cursor-pointer">cancel</i>
+                                    </div>
+                                </div>
+                            </div>
+                            </section>
+
+                    <section id="staffList">
+                        <div class='first-line'>
+                            <div class='box' id="staffBox">
+                                <div>
+                                    <img class="profileIcons" src="photo/jens.png">
+                                </div>
+                                <div>
+                                        <p>Name: Adam</p>
+                                        <p>Phone Number: 555</p>
+                                    
+                                </div>
+                                <div>
+                                    CSS, Javascript, PHP
+                                </div>
+                               <!-- <div>
+                                     <button data-target="modalStaff" class="btn btn-general modal-trigger">
+                                        MORE</button>
+                                </div>-->
+                                <div class="staff-buttons">
+                                        <i class="material-icons">edit</i>
+                                        <i class="material-icons">delete</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- modalStaff -->
+                        <div id="modalStaff" class="modal">
+                                <div class="modal-content">
+                                    <div class="left">
+                                        <img src="photo/jens.png">
+                                        <div id="mapEvent"></div>
+                                    </div>
+                                    <div class="right">
+                                        <h4>Tech Event 1</h4>
+                                        <h5><em>01.01.2018 15:00</em></h5>
+                                        <h5><em>Lygten 16, NV</em></h5>
+                                        <h5><em>Price:50dkk</em></h5>
+                                        <h5><em><strong>Speakers:John Smith</strong></em></h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                        <h5>10/100 places left</h5>
+                                    </div>
+                                 </div>
+                            </div>
+
+
+
+                    </section>
 
             </div>
 
             <!-- PARTNERS PAGE -->
-            <div id="partnersPage">
+            <div id="partnersPage" class="page">
                     
             </div>
 
             <!-- STATS PAGE -->
-            <div id="statsPage">
+            <div id="statsPage" class="page">
 
             </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNQoDXesV_3aMKy6akPXYNd-ysoTQjPcE&callback=initMap"
+    async defer></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>
