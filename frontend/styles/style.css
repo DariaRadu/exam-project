@@ -179,9 +179,61 @@ nav {
   #event-cards img {
     height: 25vh;
     object-fit: cover; }
+  #event-cards .card-buttons {
+    position: absolute;
+    padding: 2px;
+    top: 5px;
+    right: 1vw;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.6); }
+    #event-cards .card-buttons i {
+      color: white;
+      font-size: 30px;
+      padding: 0 2px;
+      cursor: pointer; }
+  #event-cards .modal-content {
+    display: flex;
+    justify-content: space-between; }
+    #event-cards .modal-content div {
+      width: 50%; }
   #event-cards .card-action {
     display: flex;
     justify-content: space-around;
     align-items: center; }
+  #event-cards #mapEvent {
+    width: 25vh;
+    height: 25vh; }
+
+#staffBox {
+  display: flex;
+  align-items: flex-start; }
+
+.staff-buttons {
+  top: 5px;
+  right: 1vw;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.6); }
+  .staff-buttons i {
+    color: white;
+    font-size: 30px;
+    padding: 0 2px;
+    cursor: pointer; }
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90vw;
+  /* height:20vh; */
+  padding: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75); }
+  .box .first-line {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
 
 /*# sourceMappingURL=style.css.map */
