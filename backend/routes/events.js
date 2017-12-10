@@ -18,4 +18,16 @@ router.get('/', (req, res, next)=> {
   });
 });
 
+router.get('/:id', (req, res, next)=> {
+  let eventId = req.params.id;
+  db.getConnection((err, connection)=> {
+    // Use the connection
+    connection.query('SELECT * FROM events WHERE id='+eventId, (error, results) =>{
+      res.send(results[0]);
+      connection.release();
+      if (error) console.log(error);
+    });
+  });
+});
+
 module.exports = router;
