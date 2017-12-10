@@ -23,19 +23,28 @@
             cursor: pointer;
         }
     }
-    .modal-content{
-        display:flex;
-        justify-content: space-between;
-        div{
-            width:50%;
-        }
-    }
     .card-action{
         display:flex;
         justify-content: space-around;
         align-items:center;
     }
 
+}
+
+#modalEvent{
+    width:70vw;
+    .modal-content{
+        display:flex;
+        justify-content: space-between;
+        div{
+            img{
+                height:25vh;
+                object-fit: cover;
+            }
+            width:50%;
+        }
+    }
+    
     #mapEvent{
         width:25vh;
         height:25vh;
