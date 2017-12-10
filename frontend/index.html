@@ -135,6 +135,88 @@
 
             <!-- STAFF PAGE -->
             <div id="staffPage" class="page">
+                    <section id="filter-box">
+                            <div id="box">
+                                <div class="first-line">
+                                    <div class="sort">
+                                            <p>SORT BY:</p>
+                                            <button class="btn btn-general btn-active">NAME</button>
+                                            <button class="btn btn-general">TITLE</button>
+                                            <button class="btn btn-general">INTERESTS</button>
+                                        </div>
+                                        <div class="search-box">
+                                            <form>
+                                                <div>
+                                                    <i class="material-icons">search</i>
+                                                    <input id="search-event" type="search" required>
+                                                </div>
+                                            </form>
+                                        </div>
+                                </div>
+                                <div class="second-line">
+                                    <div class="asc-desc">
+                                        <div class="input-field">
+                                            <select>
+                                                <option value="1" selected>Ascending</option>
+                                                <option value="2">Descending</option>
+                                            </select>
+                                            </div>
+                                    </div>
+                                    <div class="clear-filter">
+                                        <p>CLEAR FILTER</p>
+                                        <i class="material-icons cursor-pointer">cancel</i>
+                                    </div>
+                                </div>
+                            </div>
+                            </section>
+
+                    <section id="staffList">
+                        <div class='first-line'>
+                            <div class='box' id="staffBox">
+                                <div>
+                                    <img class="profileIcons" src="photo/jens.png">
+                                </div>
+                                <div>
+                                        <p>Name: Adam</p>
+                                        <p>Phone Number: 555</p>
+                                    
+                                </div>
+                                <div>
+                                    CSS, Javascript, PHP
+                                </div>
+                               <!-- <div>
+                                     <button data-target="modalStaff" class="btn btn-general modal-trigger">
+                                        MORE</button>
+                                </div>-->
+                                <div class="staff-buttons">
+                                        <i class="material-icons">edit</i>
+                                        <i class="material-icons">delete</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- modalStaff -->
+                        <div id="modalStaff" class="modal">
+                                <div class="modal-content">
+                                    <div class="left">
+                                        <img src="photo/jens.png">
+                                        <div id="mapEvent"></div>
+                                    </div>
+                                    <div class="right">
+                                        <h4>Tech Event 1</h4>
+                                        <h5><em>01.01.2018 15:00</em></h5>
+                                        <h5><em>Lygten 16, NV</em></h5>
+                                        <h5><em>Price:50dkk</em></h5>
+                                        <h5><em><strong>Speakers:John Smith</strong></em></h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                        <h5>10/100 places left</h5>
+                                    </div>
+                                 </div>
+                            </div>
+
+
+
+                    </section>
 
             </div>
 
