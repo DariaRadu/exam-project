@@ -67,7 +67,7 @@ function buttonEventModal(e){
     var eventId = e.target.getAttribute('data-event');
     if(eventId){
         eventId=Number(eventId);
-        $.get(APIlink+'/events/'+eventId, function(event){
+        $.get(APIlink+'/events/get/'+eventId, function(event){
             console.log(event);
             var modalEventTemplate = `<div class="modal-content">
             <div class="left">
@@ -138,14 +138,19 @@ var attendanceChart = new Chart(ctxAttendance, {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
             label: "attended",
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: '#12181e',
+            borderColor: '#A8CCCA',
             data: [0, 10, 5, 2, 20, 30, 45]
         },
         {
             label: "registered",
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: '#A8CCCA',
+            borderColor: '#12181e',
             data: [0, 10, 5, 2, 20, 30, 50]
         }]
-    }})
+    },
+    options:{
+        responsive:true,
+        maintainAspectRatio: false
+    }
+})

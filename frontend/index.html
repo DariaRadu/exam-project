@@ -130,7 +130,7 @@
                                                 <form class="col s12">
                                                   <div class="row">
                                                     <div class="input-field col s12">
-                                                      <input id="title" type="text" class="validate">
+                                                      <input id="title" name="eventTitle" type="text" class="validate">
                                                       <label for="title">Title</label>
                                                     </div>
                                                   </div>
@@ -139,7 +139,7 @@
                                                       <p>On which day would the event happen?</p>
                                                     </div>
                                                     <div class="input-field col s6">
-                                                            <input id="date" type="date" class="validate">
+                                                            <input id="date" type="date" name="eventDate" class="validate">
                                                             <label for="date"></label>
                                                           </div>
                                                   </div>
@@ -154,32 +154,32 @@
                                                   </div>
                                                   <div class="row">
                                                         <div class="input-field col s12">
-                                                          <input id="location" type="text" class="validate">
+                                                          <input id="location" type="text" name="eventLocation" class="validate">
                                                           <label for="location">Location</label>
                                                         </div>
                                                   </div>
                                                   <div class="row">
                                                         <div class="input-field col s12">
-                                                          <input id="location" type="text" class="validate">
+                                                          <input id="location" type="text" name="eventDescription" class="validate">
                                                           <label for="location">Description of Event</label>
                                                         </div>
                                                   </div>
                                                   <div class="row">
                                                         <div class="input-field col s12">
-                                                          <input id="entrance_fee" type="text" class="validate">
+                                                          <input id="entrance_fee" type="text" name="eventPrice" class="validate">
                                                           <label for="entrance_fee">Entrance Fee</label>
                                                         </div>
                                                   </div>
                                                   <div class="row">
                                                         <div class="input-field col s12">
-                                                          <input id="max_participants" type="text" class="validate">
+                                                          <input id="max_participants" type="text" name="eventMax" class="validate">
                                                           <label for="max_participants">Maximum number of participants</label>
                                                         </div>
                                                   </div>
                                                   <div class="row">
                                                         <div class="input-field col s12">
                                                             <p>Upload a cover photo for the event:</p>
-                                                            <input type="file" name="fileUserPicture">
+                                                            <input type="file" name="eventPicture">
                                                         </div>
                                                   </div>
                                                 </form>
@@ -319,7 +319,17 @@
                         <button class="btn btn-general">OLD EVENTS</button>
                     </div>
                 </div>
-                <canvas id="attendanceChart"></canvas>
+                <div class="chart-section">
+                    <div>
+                        <h3>General Attendance</h3>
+                        <button class="btn btn-general">SET TIME<i class="large material-icons">grid_on</i></button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="attendanceChart"></canvas>
+                        
+                    </div>
+                </div>
+                
             </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>

@@ -300,14 +300,28 @@ nav {
   box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75); }
 
 #statsPage .stats-help {
-  width: 40vw;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
-#statsPage canvas {
+#statsPage .chart-section {
   width: 90vw;
+  height: 60vh;
+  margin: 0 auto;
+  margin-top: 5vh; }
+  #statsPage .chart-section div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  #statsPage .chart-section button {
+    display: flex;
+    align-items: center; }
+
+.chart-container {
+  position: relative;
+  width: 90vw;
+  height: 40vh;
   margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

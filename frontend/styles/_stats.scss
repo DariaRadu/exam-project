@@ -1,15 +1,37 @@
 #statsPage{
     .stats-help{
-        width:40vw;
         margin:0 auto;
         display:flex;
-        justify-content:space-between;
+        justify-content:center;
         align-items:center;
         flex-wrap:wrap;
     }
 
-    canvas{
+    
+    .chart-section{
+        //background-color:red;
+        div:first-child{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        
         width:90vw;
+        height:60vh;
         margin:0 auto;
+        margin-top:5vh;
+        button{
+            display:flex;
+            align-items: center;
+        }
     }
 }
+
+.chart-container{
+    position:relative;
+    width:90vw;
+    height:40vh;
+    margin:0 auto;
+}
+

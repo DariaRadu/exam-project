@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
 const db = require('../db/mysql.js');
+//const formidable = require('express-formidable');
+
+//router.use(formidable());
+
+let eventController = require(__dirname+'/controllers/event.js');
 
 /* GET home page. */
 router.get('/', (req, res, next)=> {
@@ -18,7 +23,7 @@ router.get('/', (req, res, next)=> {
   });
 });
 
-router.get('/:id', (req, res, next)=> {
+router.get('/get/:id', (req, res)=> {
   let eventId = req.params.id;
   db.getConnection((err, connection)=> {
     // Use the connection
@@ -29,5 +34,33 @@ router.get('/:id', (req, res, next)=> {
     });
   });
 });
+
+
+router.post('/add', (req, res)=>{
+  //console.log("yes");
+  //res.send(req.body);
+  let eventTitle = req.body.eventTitle;
+  let eventDate = req.body.eventDate;
+  let eventPrice = req.body.eventPrice;
+  let eventDescription = req.body.eventDescription;
+  let eventImage = 25164;
+
+  var jEvent={
+    "title":eventTitle,
+    "date":eventDate,
+    "entrance_fee":eventPrice,
+    "description":eventDescription,
+    "image_src":eventImage,
+    "location":'KEA'
+  }
+  
+  eventController.save(jEvent, (err, result)=>{
+    if (err){
+      res.send(result);
+      return;
+    }
+    res.send(result);
+  })
+})
 
 module.exports = router;
