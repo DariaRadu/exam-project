@@ -5,6 +5,18 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 //const formidable = require('express-formidable');
+var mongo = require('mongodb').MongoClient;
+sDatabasePath = 'mongodb://localhost:27017/events';
+
+mongo.connect(sDatabasePath, (err, database)=>{
+    if (err){
+        console.log('ERROR 003 -> Cannot connect to database');
+        return false;
+    }
+    console.log('OK 004 -> Connected to database');
+    //global.db = db;
+    global.mongodb=database.db('events'); 
+});
 
 var events = require('./routes/events');
 var users = require('./routes/users');
@@ -20,8 +32,8 @@ app.use(function(req, res, next) {
 });
 
 // view engine setup
-/* app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug'); */
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
