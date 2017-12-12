@@ -5,6 +5,7 @@
     //INITIALIZING MODAL
     $('#modalEvent').modal();
     $('#modalRegisterEvent').modal();
+    $('#modalRegisterStaff').modal();
 });
 
 const APIlink="http://localhost:3000";

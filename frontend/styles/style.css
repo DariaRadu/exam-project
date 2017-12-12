@@ -8,7 +8,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", sans-serif; }
 
-p {
+p, a {
   font-family: "Open Sans", sans-serif; }
 
 .cursor-pointer {
@@ -227,7 +227,7 @@ nav {
 
 .registering {
   color: black;
-  font-size: 35px; }
+  font-size: 20px; }
 
 #submit_event {
   position: sticky; }
@@ -298,6 +298,63 @@ nav {
   -webkit-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 22px -6px rgba(0, 0, 0, 0.75); }
+
+.add-staff {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  margin-left: 5%;
+  margin-top: 2%;
+  align-items: center; }
+  .add-staff p {
+    margin: 0;
+    font-size: 17px; }
+
+#submit_staff {
+  position: sticky; }
+
+#modalRegisterStaff {
+  /* label color */
+  /* label focus color */
+  /* label underline focus color */
+  /* valid color */
+  /* label focus color */
+  /* label underline focus color */
+  /* valid color */
+  /* label focus color */
+  /* label underline focus color */
+  /* valid color */ }
+  #modalRegisterStaff .input-field label {
+    color: #000; }
+  #modalRegisterStaff .input-field input[type=text]:focus + label {
+    color: #A8CCCA; }
+  #modalRegisterStaff .input-field input[type=text]:focus {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+  #modalRegisterStaff .input-field input[type=text].valid {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+  #modalRegisterStaff .input-field input[type=time]:focus + label {
+    color: #A8CCCA; }
+  #modalRegisterStaff .input-field input[type=time]:focus {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+  #modalRegisterStaff .input-field input[type=time].valid {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+  #modalRegisterStaff .input-field input[type=date]:focus + label {
+    color: #A8CCCA; }
+  #modalRegisterStaff .input-field input[type=date]:focus {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+  #modalRegisterStaff .input-field input[type=date].valid {
+    border-bottom: 1px solid #A8CCCA;
+    box-shadow: 0 1px 0 0 #A8CCCA; }
+
+.staffrow {
+  margin-bottom: 0px; }
+
+#addStaffOption {
+  font-family: "Open Sans", sans-serif; }
 
 #statsPage .stats-help {
   margin: 0 auto;

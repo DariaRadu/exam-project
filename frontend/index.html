@@ -94,8 +94,8 @@
             
                     <!-- Events section -->
                     <div class='add-event'>
-                        <p>ADD NEW EVENT</p>
-                        <a data-target="modalRegisterEvent" class="registering modal-trigger" > 
+                        <a data-target="modalRegisterEvent" class="registering modal-trigger cursor-pointer" > 
+                        ADD NEW EVENT
                          <i class="material-icons cursor-pointer">add_circle_outline</i>   
                         </a>
                         
@@ -155,7 +155,13 @@
                                                   <div class="row">
                                                         <div class="input-field col s12">
                                                           <input id="location" type="text" name="eventLocation" class="validate">
-                                                          <label for="location">Location</label>
+                                                          <label for="location">Address of the event</label>
+                                                        </div>
+                                                  </div>
+                                                  <div class="row">
+                                                        <div class="input-field col s12">
+                                                          <input id="event_keywords" type="text" name="eventKeywords" class="validate">
+                                                          <label for="event_keywords">Keywords (seperate by commas)</label>
                                                         </div>
                                                   </div>
                                                   <div class="row">
@@ -251,9 +257,99 @@
                                     </div>
                                 </div>
                             </div>
-                            </section>
+                        </section>
 
-                    <section id="staffList">
+                        <div id="addStaffOption" class='add-staff'>
+                            <a data-target="modalRegisterStaff" class="registering modal-trigger cursor-pointer" >
+                                ADD NEW STAFF
+                                <i class="material-icons cursor-pointer">add_circle_outline</i>   
+                            </a>
+                        </div>
+
+                             <!-- Modal Structure -->
+                        <div id="modalRegisterStaff" class="modal modal-fixed-footer">
+                            <div class="modal-register-content">
+                                <h1 class='formHeading'>Register Staff</h1>
+                                    <div class="row staffrow">
+                                            <form class="col s12">
+                                              <div class="row">
+                                                <div class="input-field col s6">
+                                                  <input id="name" name="name" type="text" class="validate">
+                                                  <label for="name">First Name</label>
+                                                </div>
+                                            <div class="row">
+                                                <div class="input-field col s6">
+                                                    <input id="last_name" name="lastName" type="text" class="validate">
+                                                    <label for="last_name">Last Name</label>
+                                                </div>
+                                            </div>
+                                              <div class="row">
+                                                <div class="input-field col s12">
+                                                    <div class="input-field col s12">
+                                                        <input id="staff_email" name="staffEmail" type="email" class="validate">
+                                                        <label for="staff_email">Email</label>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="staff_password" name="staffPassword" type="password" class="validate">
+                                                    <label for="staff_password">Password</label>
+                                                </div>
+                                              <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input id="staff_phoneNumber" name="staffPhoneNumber" type="text" class="validate">
+                                                        <label for="staff_phoneNumber">Phone Number</label>
+                                                    </div>
+                                              </div>
+                                              <div class="row">
+                                                    <div class="input-field col s12">
+                                                      <input id="staffTitle" type="text" name="staffTitle" class="validate">
+                                                      <label for="staff_title">Title</label>
+                                                    </div>
+                                              </div>
+                                              <div class="row">
+                                                    <div class="input-field col s12">
+                                                      <input id="staff_keywords" type="text" name="staffKeywords" class="validate">
+                                                      <label for="staff_keywords">Keywords (Seperate by coma)</label>
+                                                    </div>
+                                              </div>
+                                              <div class="row">
+                                                    <div class="input-field col s12">
+                                                      <input id="staff_gender" type="text" name="staffGender" class="validate">
+                                                      <label for="staff_gender">Gender</label>
+                                                    </div>
+                                              </div>
+                                              <div class="row">
+                                                    <div class="input-field col s6">
+                                                        <p>Birth Day</p>
+                                                    </div>
+                                                    <div class="input-field col s6">
+                                                        <input id="birthday" type="date" name="birthday" class="validate">
+                                                        <label for="birthday"></label>
+                                                    </div>
+                                              </div>
+                                              <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <p>Upload a profile picture:</p>
+                                                        <input type="file" name="profilePicture">
+                                                    </div>
+                                              </div>
+                                            </form>
+                                          </div>
+
+                            <div id="submit_staff" class="modal-footer">
+                            <button id="btnRegisterStaff" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
+                                  <a>Submit</a> 
+                            </button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                     <section id="staffList">
                         <div class='first-line'>
                             <div class='box' id="staffBox">
                                 <div>
