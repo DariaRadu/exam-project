@@ -43,6 +43,7 @@ router.post('/add', (req, res)=>{
   let eventDate = req.body.eventDate;
   let eventPrice = req.body.eventPrice;
   let eventDescription = req.body.eventDescription;
+  let eventLocation = req.body.eventLocation;
   let eventImage = 25164;
 
   var jEvent={
@@ -51,7 +52,7 @@ router.post('/add', (req, res)=>{
     "entrance_fee":eventPrice,
     "description":eventDescription,
     "image_src":eventImage,
-    "location":'KEA'
+    "location":eventLocation
   }
   
   eventController.save(jEvent, (err, result)=>{
@@ -61,6 +62,29 @@ router.post('/add', (req, res)=>{
     }
     res.send(result);
   })
+})
+
+router.post('/add/location', (req,res)=>{
+  var location = req.body;
+  //we first check if the location already exists
+  global.mongodb.collection('locations').find({"name":location.name}).count()
+  .then((count) => {
+    //count returns a promise, which gives the total amount of rows
+    var checkIfLocationExists=count;
+    if (checkIfLocationExists==0){
+      //if the location doesn't exist, we save it
+      eventController.saveLocation(location, (err, result)=>{
+        if (err){
+          console.log(result.message);
+          return;
+        }
+      })
+
+      //we send back the location name to be added in the Events table with the rest
+      res.send(location.name);
+    }
+  });
+
 })
 
 module.exports = router;

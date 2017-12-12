@@ -110,7 +110,7 @@ $.get(APIlink+'/events', function(data){
         var event=aEvents[i];
         var eventCardTemplate=`<div class="card">
         <div class="card-image">
-            <img src="${cloudinaryLink+event.image_src}">
+            <img src="${cloudinaryLink+`/c_scale,q_auto,w_600/`+event.image_src}">
             <div class="card-buttons">
                 <i class="material-icons">edit</i>
                 <i class="material-icons">delete</i>
@@ -125,6 +125,45 @@ $.get(APIlink+'/events', function(data){
             <button data-target="modalEvent" data-event=${event.id} class="btn btn-event btn-general modal-trigger">MORE</button>`;
         eventsCardsDiv.innerHTML+=eventCardTemplate;
     }
+})
+
+//ADDING EVENT
+var btnRegisterEvent = document.querySelector('#btnRegisterEvent');
+btnRegisterEvent.addEventListener('click', function(){
+    var geocoder, latlng;
+    var address = document.querySelector("#location").value;
+    console.log(address);
+    geocoder = new google.maps.Geocoder();
+    geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == 'OK') {
+            var lat = results[0].geometry.location.lat(); 
+            var lng = results[0].geometry.location.lng(); 
+            latlng = [lat, lng];
+            console.log(latlng);
+            var locationData = {
+                "name":address,
+                "location":{
+                    "type":"Point",
+                    "coordinates":latlng
+                }
+            }
+            $.ajax({
+                method: "POST",
+                contentType:'application/json',
+                url:APIlink+'/events/add/location',
+                data:JSON.stringify(locationData)
+            }).done(function(data){
+                console.log(data);
+            })
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+
+    /* var newEventData = $('#modalRegisterEvent form').serialize();
+    console.log(newEventData); */
+    
+
 })
 
 //STATS CHARTS
