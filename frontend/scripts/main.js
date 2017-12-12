@@ -133,7 +133,8 @@ var btnRegisterEvent = document.querySelector('#btnRegisterEvent');
 btnRegisterEvent.addEventListener('click', function(){
     var geocoder, latlng;
     var address = document.querySelector("#location").value;
-    console.log(address);
+
+    //we first turn the address into lat/lng
     geocoder = new google.maps.Geocoder();
     geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == 'OK') {
@@ -148,6 +149,7 @@ btnRegisterEvent.addEventListener('click', function(){
                     "coordinates":latlng
                 }
             }
+            //then we add the location data to the database
             $.ajax({
                 method: "POST",
                 contentType:'application/json',
@@ -161,8 +163,32 @@ btnRegisterEvent.addEventListener('click', function(){
         }
     });
 
-    /* var newEventData = $('#modalRegisterEvent form').serialize();
-    console.log(newEventData); */
+    //KEYWORDS
+    var keywords = document.querySelector('#event_keywords').value;
+    //we turn the keywords from a string to an array
+    keywords=keywords.split(',');
+    var jKeywords = {
+        "list":keywords
+    }
+    //then we add then in the database
+    $.ajax({
+        method: "POST",
+        contentType:'application/json',
+        url:APIlink+'/events/add/keywords',
+        data:JSON.stringify(jKeywords)
+    }).done(function(id){
+        //we get back the id of the keyword list
+        var keywordsId = id;
+        document.querySelector("#event_keywords").value=keywordsId;
+        var newEventData = $('#modalRegisterEvent form').serialize();
+
+        //we send the event data to be added in the database
+        $.post(APIlink+"/events/add", newEventData, function(result){
+            console.log(result);
+        })
+    })
+
+    
     
 
 })
