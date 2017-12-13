@@ -95,7 +95,6 @@
                     </section>
             
                     <!-- Events section -->
-<<<<<<< HEAD
                     <div class='add-event'>
                         <a data-target="modalRegisterEvent" class="registering modal-trigger cursor-pointer" > 
                         ADD NEW EVENT
@@ -127,20 +126,18 @@
                         </div>
 
                         <!-- Modal Register Structure -->
-=======
-                    <div id="upcomingEvents">
+                    <!--<div id="upcomingEvents">
                         <div class='add-event'>
                             <a data-target="modalRegisterEvent" class="registering modal-trigger cursor-pointer" > 
                             ADD NEW EVENT
                              <i class="material-icons cursor-pointer">add_circle_outline</i>   
                             </a>
                             
-                        </div>
+                        </div>-->
                         <section id="event-cards"></section>
                             <!-- Event Registering Modal Structure -->
     
                         <!-- Modal Structure -->
->>>>>>> d3b4c67fc0ade16ba6f30d31e092734cf277a239
                         <div id="modalRegisterEvent" class="modal modal-fixed-footer">
                             <div class="modal-register-content">
                                 <h1 class='formHeading'>Register Event Form</h1>
@@ -150,7 +147,6 @@
                                                 <div class="input-field col s12">
                                                     <input id="title" name="eventTitle" type="text" class="validate">
                                                     <label for="title">Title</label>
-<<<<<<< HEAD
                                                 </div>
                                             </div>
                                                 <div class="row">
@@ -286,6 +282,11 @@
                                                         <input type="file" name="eventPicture">
                                                     </div>
                                                 </div>
+                                                <div id="submit_staff" class="modal-footer">
+                                                       <button id="btnUpdateEvent" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
+                                                            <a>Submit</a>
+                                                        </button>
+                                                </div>
                                             </form>
                                     </div>
                             </div>
@@ -311,99 +312,7 @@
                     </section>
             </div>
 
-            <!-- STAFF PAGE -->
-            <div id="staffPage" class="page">
-                    <section id="filter-box">
-                            <div id="box">
-                                <div class="first-line">
-                                    <div class="sort">
-                                            <p>SORT BY:</p>
-                                            <button class="btn btn-general btn-active">NAME</button>
-                                            <button class="btn btn-general">TITLE</button>
-                                            <button class="btn btn-general">INTERESTS</button>
-                                        </div>
-                                        <div class="search-box">
-                                            <form>
-                                                <div>
-                                                    <i class="material-icons">search</i>
-                                                    <input id="search-event" type="search" required>
-=======
->>>>>>> d3b4c67fc0ade16ba6f30d31e092734cf277a239
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="input-field col s6">
-                                                    <p>On which day would the event happen?</p>
-                                                </div>
-                                                <div class="input-field col s6">
-                                                    <input id="date" type="date" name="eventDate" class="validate">
-                                                    <label for="date"></label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="input-field col s6">
-                                                    <p>The exact time when the event starts:</p>
-                                                </div>
-                                                <div class="input-field col s6">
-                                                    <input id="time" type="time" class="validate">
-                                                    <label for="time"></label>
-                                                </div>
-                                                </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input id="location" type="text" name="eventLocation" class="validate">
-                                                    <label for="location">Address of the event</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input id="event_keywords" type="text" name="eventKeywords" class="validate">
-                                                    <label for="event_keywords">Keywords (seperate by commas)</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input id="location" type="text" name="eventDescription" class="validate">
-                                                    <label for="location">Description of Event</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input id="entrance_fee" type="text" name="eventPrice" class="validate">
-                                                    <label for="entrance_fee">Entrance Fee</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <input id="max_participants" type="text" name="eventMax" class="validate">
-                                                    <label for="max_participants">Maximum number of participants</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="input-field col s12">
-                                                    <p>Upload a cover photo for the event:</p>
-                                                    <input type="file" name="eventPicture">
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div id="submit_event" class="modal-footer">
-                                    <!-- <button id="btnLogin" class="btn btnLogin waves-effect waves-light" type="button" name="action">Login
-                                            <i class="material-icons right">send</i>
-                                        </button> -->
-                                    <button id="btnRegisterEvent" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
-                                        <a>Submit</a> </button>
-                                </div>
-                            </div>
-                                <!-- Modal Structure -->
-                            <div id="modalEvent" class="modal"></div>
-                    </div>
-
-                    <div id="oldEvents">
-                        <section id='old-events-cards'></section>
-                    </div>
-            </div>
+        
 
             <!-- STAFF PAGE -->
             <div id="staffPage" class="page">
@@ -441,85 +350,87 @@
                         </div>
                     </div>
                 </section>
+                </div>
 
-                <div id="addStaffOption" class='add-staff'>
+            <div id="addStaffOption" class='add-staff'>
                     <a data-target="modalRegisterStaff" class="registering modal-trigger cursor-pointer" >
                         ADD NEW STAFF
                         <i class="material-icons cursor-pointer">add_circle_outline</i>   
                     </a>
-                </div>
+                </div> 
 
-                <!-- Modal Structure -->
-                <div id="modalRegisterStaff" class="modal modal-fixed-footer">
+            <!-- Modal Staff Register Structure -->
+            <div id="modalRegisterStaff" class="modal modal-fixed-footer">
                     <div class="modal-register-content">
                         <h1 class='formHeading'>Register Staff</h1>
-                        <div class="row staffrow">
-                            <form class="col s12">
-                                <div class="row">
-                                <div class="input-field col s6">
-                                    <input id="name" name="name" type="text" class="validate">
-                                    <label for="name">First Name</label>
-                                </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input id="last_name" name="lastName" type="text" class="validate">
-                                    <label for="last_name">Last Name</label>
-                                </div>
-                            </div>
-                                <div class="row">
-                                <div class="input-field col s12">
-                                    <div class="input-field col s12">
-                                        <input id="staff_email" name="staffEmail" type="email" class="validate">
-                                        <label for="staff_email">Email</label>
+                            <div class="row staffrow">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <input id="name" name="name" type="text" class="validate">
+                                            <label for="name">First Name</label>
+                                        </div>
                                     </div>
-                                </div>
-                                </div>
-                                <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="staff_password" name="staffPassword" type="password" class="validate">
-                                    <label for="staff_password">Password</label>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="staff_phoneNumber" name="staffPhoneNumber" type="text" class="validate">
-                                        <label for="staff_phoneNumber">Phone Number</label>
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <input id="last_name" name="lastName" type="text" class="validate">
+                                            <label for="last_name">Last Name</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="staffTitle" type="text" name="staffTitle" class="validate">
-                                        <label for="staff_title">Title</label>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staff_email" name="staffEmail" type="email" class="validate">
+                                            <label for="staff_email">Email</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="staff_keywords" type="text" name="staffKeywords" class="validate">
-                                        <label for="staff_keywords">Keywords (Seperate by coma)</label>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staff_password" name="staffPassword" type="password" class="validate">
+                                            <label for="staff_password">Password</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="staff_gender" type="text" name="staffGender" class="validate">
-                                        <label for="staff_gender">Gender</label>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staff_phoneNumber" name="staffPhoneNumber" type="text" class="validate">
+                                            <label for="staff_phoneNumber">Phone Number</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s6">
-                                        <p>Birth Day</p>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staffTitle" type="text" name="staffTitle" class="validate">
+                                            <label for="staff_title">Title</label>
+                                        </div>
                                     </div>
-                                    <div class="input-field col s6">
-                                        <input id="birthday" type="date" name="birthday" class="validate">
-                                        <label for="birthday"></label>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staff_keywords" type="text" name="staffKeywords" class="validate">
+                                            <label for="staff_keywords">Keywords (Seperate by coma)</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <p>Upload a profile picture:</p>
-                                        <input type="file" name="profilePicture">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staff_gender" type="text" name="staffGender" class="validate">
+                                            <label for="staff_gender">Gender</label>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <p>Birth Day</p>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input id="birthday" type="date" name="birthday" class="validate">
+                                            <label for="birthday"></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <p>Upload a profile picture:</p>
+                                            <input type="file" name="profilePicture">
+                                        </div>
+                                    </div>
                             </form>
                         </div>
+                    </div>
                         <div id="submit_staff" class="modal-footer">
                             <button id="btnRegisterStaff" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
                                     <a>Submit</a> 
@@ -527,9 +438,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-                
 
         <section id="staffList">
                 <div class='first-line'>
@@ -550,11 +458,94 @@
                                 MORE</button>
                         </div>-->
                         <div class="staff-buttons">
+                            <a data-target="modalUpdateStaff" class="registering modal-trigger cursor-pointer" >
                                 <i class="material-icons">edit</i>
+                            </a>
                                 <i class="material-icons">delete</i>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Modal Staff Register Structure -->
+            <div id="modalUpdateStaff" class="modal modal-fixed-footer">
+                    <div class="modal-register-content">
+                        <h1 class='formHeading'>Update Staff</h1>
+                            <div class="row staffrow">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <input id="name" name="name" type="text" class="validate">
+                                            <label for="name">First Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <input id="last_name" name="lastName" type="text" class="validate">
+                                            <label for="last_name">Last Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staff_email" name="staffEmail" type="email" class="validate">
+                                            <label for="staff_email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staff_password" name="staffPassword" type="password" class="validate">
+                                            <label for="staff_password">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staff_phoneNumber" name="staffPhoneNumber" type="text" class="validate">
+                                            <label for="staff_phoneNumber">Phone Number</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staffTitle" type="text" name="staffTitle" class="validate">
+                                            <label for="staff_title">Title</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staff_keywords" type="text" name="staffKeywords" class="validate">
+                                            <label for="staff_keywords">Keywords (Seperate by coma)</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="staff_gender" type="text" name="staffGender" class="validate">
+                                            <label for="staff_gender">Gender</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <p>Birth Day</p>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input id="birthday" type="date" name="birthday" class="validate">
+                                            <label for="birthday"></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <p>Upload a profile picture:</p>
+                                            <input type="file" name="profilePicture">
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                        <div id="submit_staff" class="modal-footer">
+                            <button id="btnUpdateStaff" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
+                                    <a>Submit</a> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
 
                 <!-- modalStaff -->
                 <div id="modalStaff" class="modal">
