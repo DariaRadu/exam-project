@@ -200,6 +200,7 @@ btnRegisterEvent.addEventListener('click', function(){
             console.log(result);
         })
     })
+})
 
 
 //STATS CHARTS
