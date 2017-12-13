@@ -129,6 +129,7 @@ $.get(APIlink+'/events', function(data){
 })
 
 //ADDING EVENT
+
 var btnRegisterEvent = document.querySelector('#btnRegisterEvent');
 btnRegisterEvent.addEventListener('click', function(){
     var geocoder, latlng;
@@ -170,6 +171,13 @@ btnRegisterEvent.addEventListener('click', function(){
     var jKeywords = {
         "list":keywords
     }
+    /* var credentials ={
+        "upload_preset":'rrr0rrhe',
+        "api_key":538954946762286,
+        "file":eventPicture,
+        "folder":'test/'
+    } */
+
     //then we add then in the database
     $.ajax({
         method: "POST",
@@ -179,7 +187,12 @@ btnRegisterEvent.addEventListener('click', function(){
     }).done(function(id){
         //we get back the id of the keyword list
         var keywordsId = id;
-        document.querySelector("#event_keywords").value=keywordsId;
+        document.querySelector("#event_keywords").value=keywordsId; 
+
+        //now we get the picture and upload it to cloudinary
+        var eventPicture = document.querySelector("#eventPicture").files[0];
+        console.log(eventPicture);
+
         var newEventData = $('#modalRegisterEvent form').serialize();
 
         //we send the event data to be added in the database
@@ -188,10 +201,6 @@ btnRegisterEvent.addEventListener('click', function(){
         })
     })
 
-    
-    
-
-})
 
 //STATS CHARTS
 var ctxAttendance = document.getElementById('attendanceChart').getContext('2d');
