@@ -142,7 +142,7 @@
             if (status == 'OK') {
                 var lat = results[0].geometry.location.lat(); 
                 var lng = results[0].geometry.location.lng(); 
-                latlng = [lat, lng];
+                latlng = [lng, lat];
                 console.log(latlng);
                 var locationData = {
                     "name":address,
@@ -167,34 +167,38 @@
 
         //KEYWORDS
         var keywords = document.querySelector('#event_keywords').value;
+        var eventTitle = document.querySelector('#modalRegisterEvent #title').value;
         //we turn the keywords from a string to an array
-        keywords=keywords.split(',');
-        var jKeywords = {
-            "list":keywords
-        }
+        if (keywords!=""){
+            keywords=keywords.split(',');
+            var jKeywords = {
+                "list":keywords,
+                "eventTitle":eventTitle
 
-        //then we add then in the database
-        $.ajax({
-            method: "POST",
-            contentType:'application/json',
-            url:APIlink+'/events/add/keywords',
-            data:JSON.stringify(jKeywords)
-        }).done(function(id){
-            //we get back the id of the keyword list
-            var keywordsId = id;
-            document.querySelector("#event_keywords").value=keywordsId; 
-
-            //now we get the picture and upload it to cloudinary
-            var eventPicture = document.querySelector("#eventPicture").files[0];
-            console.log(eventPicture);
-
-            var newEventData = $('#modalRegisterEvent form').serialize();
-
-            //we send the event data to be added in the database
-            $.post(APIlink+"/events/add", newEventData, function(result){
-                console.log(result);
+            }
+    
+            //then we add then in the database
+            $.ajax({
+                method: "POST",
+                contentType:'application/json',
+                url:APIlink+'/events/add/keywords',
+                data:JSON.stringify(jKeywords)
+            }).done(function(id){
+                //we get back the id of the keyword list
+                var keywordsId = id;
+                document.querySelector("#event_keywords").value=keywordsId; 
+    
+                //now we get the picture and upload it to cloudinary
+                //var eventPicture = document.querySelector("#eventPicture").files[0];
+                //console.log(eventPicture);
+                var newEventData = $('#modalRegisterEvent form').serialize();
+    
+                //we send the event data to be added in the database
+                $.post(APIlink+"/events/add", newEventData, function(result){
+                    console.log(result);
+                })
             })
-        })
+        }
     })
    
 

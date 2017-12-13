@@ -124,7 +124,7 @@
                                 <button data-target="modalEvent" class="btn btn-general modal-trigger">MORE</button>
                             </div> 
                         </div>
-                        
+                    </section>
                         
                         <!-- Event Registering Modal Structure -->
                         <div id="modalRegisterEvent" class="modal modal-fixed-footer">
@@ -160,8 +160,8 @@
                                                     <div class="input-field col s12">
                                                         <input id="location" type="text" name="eventLocation" class="validate">
                                                         <label for="location">Address of the event</label>
-                                                        </div>
-                                                  </div>
+                                                    </div>
+                                                </div>
                                                 <div class="row">
                                                     <div class="input-field col s12">
                                                         <input id="event_keywords" type="text" name="eventKeywords" class="validate">
@@ -196,10 +196,12 @@
                                     </div>
                                 </div>
                                 <div id="submit_event" class="modal-footer">
-                                   <!-- <button id="btnLogin" class="btn btnLogin waves-effect waves-light" type="button" name="action">Login
-                                            <i class="material-icons right">send</i>
-                                     </button> -->
-                                  <button id="btnRegisterEvent" type="button" class="btn btn-general modal-action modal-close" > Submit </button>
+                                    <button type="button" class="btn-general btn-close-active modal-action modal-close waves-effect waves-green btn-flat">
+                                        <a>Close</a>
+                                    </button>
+                                    <button id="btnRegisterEvent" type="button" class="btn-general waves-effect waves-green btn-flat " >
+                                        <a>Submit</a>
+                                    </button>
                                 </div>
                         </div>
 
@@ -271,9 +273,12 @@
                                                     </div>
                                                 </div>
                                                 <div id="submit_staff" class="modal-footer">
-                                                       <button id="btnUpdateEvent" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
-                                                            <a>Submit</a>
-                                                        </button>
+                                                    <button type="button" class="btn-general btn-close-active modal-action modal-close waves-effect waves-green btn-flat">
+                                                        <a>Close</a>
+                                                    </button>
+                                                    <button id="btnUpdateEvent" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
+                                                        <a>Submit</a>
+                                                    </button>
                                                 </div>
                                             </form>
                                     </div>
@@ -296,8 +301,8 @@
                                     <h5>10/100 places left</h5>
                                 </div>
                              </div> -->
-                        </div>   
-                    </section>
+                        </div>
+                        </div>
             </div>
 
 
@@ -447,6 +452,9 @@
                 </div>
                 </div>
                     <div id="submit_staff" class="modal-footer">
+                        <button type="button" class="btn-general btn-close-active modal-action modal-close waves-effect waves-green btn-flat">
+                            <a>Close</a>
+                        </button>
                         <button id="btnRegisterStaff" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
                                 <a>Submit</a> 
                         </button>
@@ -527,6 +535,9 @@
                     </div>
                 </div>
                     <div id="submit_staff" class="modal-footer">
+                        <button type="button" class="btn-general btn-close-active modal-action modal-close waves-effect waves-green btn-flat">
+                            <a>Close</a>
+                        </button>
                         <button id="btnUpdateStaff" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
                                 <a>Submit</a> 
                         </button>
