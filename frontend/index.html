@@ -313,6 +313,99 @@
             </div>
 
         
+            <!-- STAFF PAGE -->
+            <div id="staffPage" class="page">
+                    <section id="filter-box">
+                            <div id="box">
+                                <div class="first-line">
+                                    <div class="sort">
+                                            <p>SORT BY:</p>
+                                            <button class="btn btn-general btn-active">NAME</button>
+                                            <button class="btn btn-general">TITLE</button>
+                                            <button class="btn btn-general">INTERESTS</button>
+                                        </div>
+                                        <div class="search-box">
+                                            <form>
+                                                <div>
+                                                    <i class="material-icons">search</i>
+                                                    <input id="search-event" type="search" required>
+=======
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s6">
+                                                    <p>On which day would the event happen?</p>
+                                                </div>
+                                                <div class="input-field col s6">
+                                                    <input id="date" type="date" name="eventDate" class="validate">
+                                                    <label for="date"></label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s6">
+                                                    <p>The exact time when the event starts:</p>
+                                                </div>
+                                                <div class="input-field col s6">
+                                                    <input id="time" type="time" class="validate">
+                                                    <label for="time"></label>
+                                                </div>
+                                                </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="location" type="text" name="eventLocation" class="validate">
+                                                    <label for="location">Address of the event</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="event_keywords" type="text" name="eventKeywords" class="validate">
+                                                    <label for="event_keywords">Keywords (seperate by commas)</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="location" type="text" name="eventDescription" class="validate">
+                                                    <label for="location">Description of Event</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="entrance_fee" type="text" name="eventPrice" class="validate">
+                                                    <label for="entrance_fee">Entrance Fee</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="max_participants" type="text" name="eventMax" class="validate">
+                                                    <label for="max_participants">Maximum number of participants</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <p>Upload a cover photo for the event:</p>
+                                                    <input id="eventPicture" type="file" class="cloudinary-fileupload" name="file">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="submit_event" class="modal-footer">
+                                    <!-- <button id="btnLogin" class="btn btnLogin waves-effect waves-light" type="button" name="action">Login
+                                            <i class="material-icons right">send</i>
+                                        </button> -->
+                                    <button id="btnRegisterEvent" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
+                                        <a>Submit</a> </button>
+                                </div>
+                            </div>
+                                <!-- Modal Structure -->
+                            <div id="modalEvent" class="modal"></div>
+                    </div>
+
+                    <div id="oldEvents">
+                        <section id='old-events-cards'></section>
+                    </div>
+            </div>
+>>>>>>> 2559472e2b5df8df098722b59b89d26da9603c40
 
             <!-- STAFF PAGE -->
             <div id="staffPage" class="page">
@@ -563,11 +656,9 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                                 <h5>10/100 places left</h5>
                             </div>
-                            </div>
+                        </div>
                     </div>
-
-
-
+                </div>
             </section>
 
             <!-- PARTNERS PAGE -->
@@ -598,7 +689,6 @@
                 </div>
                 
             </div>
-    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
