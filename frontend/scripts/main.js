@@ -6,6 +6,7 @@
     $('#modalEvent').modal();
     $('#modalRegisterEvent').modal();
     $('#modalRegisterStaff').modal();
+    $('#modalUpdateEvent').modal();
 });
 
 const APIlink="http://localhost:3000";

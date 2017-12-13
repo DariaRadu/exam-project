@@ -41,7 +41,9 @@
                 <li data-page="staffPage" data-nav="navStaff" id="navStaff" class="nav">STAFF</li>
                 <li data-page="partnersPage" data-nav="navPartners" id="navPartners" class="nav">PARTNERS</li>
                 <li data-page="statsPage" data-nav="navStats" id="navStats" class="nav">STATS</li>
-                <li id="navSettings"><i class="material-icons">settings</i></li>
+                <li id="navSettings"><!--<i class="material-icons">settings</i>-->
+                
+                </li>
                 <li>NAME</li>
             </ul>
         </nav>
@@ -101,11 +103,14 @@
                         
                     </div>
                     <section id="event-cards">
-                        <!-- <div class="card">
+                         <div class="card">
                             <div class="card-image">
                                 <img src="photo/ID_logo.png">
                                 <div class="card-buttons">
-                                    <i class="material-icons">edit</i>
+                                    <a data-target="modalUpdateEvent" class="registering modal-trigger cursor-pointer">
+                                        <i class="material-icons">edit</i>
+                                    </a>
+                                   
                                     <i class="material-icons">delete</i>
                                 </div>
                             </div>
@@ -117,80 +122,78 @@
                             <div class="card-action">
                                 <p>10/100 places left</p>
                                 <button data-target="modalEvent" class="btn btn-general modal-trigger">MORE</button>
-                            </div> -->
+                            </div> 
                         </div>
 
-                        <!-- Event Registering Modal Structure -->
-
-                        <!-- Modal Structure -->
+                        <!-- Modal Register Structure -->
                         <div id="modalRegisterEvent" class="modal modal-fixed-footer">
-                                <div class="modal-register-content">
-                                    <h1 class='formHeading'>Register Event Form</h1>
-                                        <div class="row">
-                                                <form class="col s12">
-                                                  <div class="row">
-                                                    <div class="input-field col s12">
-                                                      <input id="title" name="eventTitle" type="text" class="validate">
-                                                      <label for="title">Title</label>
-                                                    </div>
-                                                  </div>
-                                                  <div class="row">
+                            <div class="modal-register-content">
+                                <h1 class='formHeading'>Register Event Form</h1>
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="title" name="eventTitle" type="text" class="validate">
+                                                    <label for="title">Title</label>
+                                                </div>
+                                            </div>
+                                                <div class="row">
                                                     <div class="input-field col s6">
                                                       <p>On which day would the event happen?</p>
                                                     </div>
                                                     <div class="input-field col s6">
-                                                            <input id="date" type="date" name="eventDate" class="validate">
-                                                            <label for="date"></label>
-                                                          </div>
-                                                  </div>
-                                                  <div class="row">
+                                                        <input id="date" type="date" name="eventDate" class="validate">
+                                                        <label for="date"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
                                                     <div class="input-field col s6">
                                                       <p>The exact time when the event starts:</p>
                                                     </div>
                                                     <div class="input-field col s6">
-                                                            <input id="time" type="time" class="validate">
-                                                            <label for="time"></label>
-                                                          </div>
-                                                  </div>
-                                                  <div class="row">
-                                                        <div class="input-field col s12">
-                                                          <input id="location" type="text" name="eventLocation" class="validate">
-                                                          <label for="location">Address of the event</label>
+                                                        <input id="time" type="time" class="validate">
+                                                        <label for="time"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input id="location" type="text" name="eventLocation" class="validate">
+                                                        <label for="location">Address of the event</label>
                                                         </div>
                                                   </div>
-                                                  <div class="row">
-                                                        <div class="input-field col s12">
-                                                          <input id="event_keywords" type="text" name="eventKeywords" class="validate">
-                                                          <label for="event_keywords">Keywords (seperate by commas)</label>
-                                                        </div>
-                                                  </div>
-                                                  <div class="row">
-                                                        <div class="input-field col s12">
-                                                          <input id="location" type="text" name="eventDescription" class="validate">
-                                                          <label for="location">Description of Event</label>
-                                                        </div>
-                                                  </div>
-                                                  <div class="row">
-                                                        <div class="input-field col s12">
-                                                          <input id="entrance_fee" type="text" name="eventPrice" class="validate">
-                                                          <label for="entrance_fee">Entrance Fee</label>
-                                                        </div>
-                                                  </div>
-                                                  <div class="row">
-                                                        <div class="input-field col s12">
-                                                          <input id="max_participants" type="text" name="eventMax" class="validate">
-                                                          <label for="max_participants">Maximum number of participants</label>
-                                                        </div>
-                                                  </div>
-                                                  <div class="row">
-                                                        <div class="input-field col s12">
-                                                            <p>Upload a cover photo for the event:</p>
-                                                            <input type="file" name="eventPicture">
-                                                        </div>
-                                                  </div>
-                                                </form>
-                                              </div>
-                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input id="event_keywords" type="text" name="eventKeywords" class="validate">
+                                                        <label for="event_keywords">Keywords (seperate by commas)</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input id="location" type="text" name="eventDescription" class="validate">
+                                                        <label for="location">Description of Event</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input id="entrance_fee" type="text" name="eventPrice" class="validate">
+                                                        <label for="entrance_fee">Entrance Fee</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input id="max_participants" type="text" name="eventMax" class="validate">
+                                                        <label for="max_participants">Maximum number of participants</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <p>Upload a cover photo for the event:</p>
+                                                        <input type="file" name="eventPicture">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                    </div>
+                            </div>
                                 <div id="submit_event" class="modal-footer">
                                    <!-- <button id="btnLogin" class="btn btnLogin waves-effect waves-light" type="button" name="action">Login
                                             <i class="material-icons right">send</i>
@@ -200,6 +203,76 @@
                                 </div>
                         </div>
 
+                        <!-- Modal Update Event Structure -->
+
+                        <div id="modalUpdateEvent" class="modal modal-fixed-footer">
+                            <div class="modal-register-content">
+                                <h1 class='formHeading'>Update Event Form</h1>
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <div class="row">
+                                                <div class="input-field col s12">
+                                                    <input id="title" name="eventTitle" type="text" class="validate">
+                                                    <label for="title">Title</label>
+                                                </div>
+                                            </div>
+                                                <div class="row">
+                                                    <div class="input-field col s6">
+                                                      <p>On which day would the event happen?</p>
+                                                    </div>
+                                                    <div class="input-field col s6">
+                                                        <input id="date" type="date" name="eventDate" class="validate">
+                                                        <label for="date"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s6">
+                                                      <p>The exact time when the event starts:</p>
+                                                    </div>
+                                                    <div class="input-field col s6">
+                                                        <input id="time" type="time" class="validate">
+                                                        <label for="time"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input id="location" type="text" name="eventLocation" class="validate">
+                                                        <label for="location">Address of the event</label>
+                                                        </div>
+                                                  </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input id="event_keywords" type="text" name="eventKeywords" class="validate">
+                                                        <label for="event_keywords">Keywords (seperate by commas)</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input id="location" type="text" name="eventDescription" class="validate">
+                                                        <label for="location">Description of Event</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input id="entrance_fee" type="text" name="eventPrice" class="validate">
+                                                        <label for="entrance_fee">Entrance Fee</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input id="max_participants" type="text" name="eventMax" class="validate">
+                                                        <label for="max_participants">Maximum number of participants</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <p>Upload a cover photo for the event:</p>
+                                                        <input type="file" name="eventPicture">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                    </div>
+                            </div>
 
                         <!-- Modal Structure -->
                         <div id="modalEvent" class="modal">
