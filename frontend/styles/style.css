@@ -48,6 +48,11 @@ p, a {
 #eventsPage.page {
   display: block; }
 
+h1 {
+  font-size: 3em;
+  padding-left: 5%;
+  font-weight: bold; }
+
 /* -------------------- RESPONSIVE MIXINS ------------------------- */
 nav {
   border-top: 7px solid #12181e;
@@ -326,7 +331,7 @@ nav {
 
 .box {
   justify-content: space-between;
-  margin-top: 5%;
+  margin-top: 4%;
   margin-left: 5%;
   width: 90vw;
   padding: 10px;
