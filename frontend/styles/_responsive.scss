@@ -7,6 +7,7 @@ $tablet-width: 768px;
 $laptop-width: 1024px;
 $desktop-width: 1440px;
 $hd-width: 2560px;
+$md-width:992px;
 
 @mixin phone {
   @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
@@ -34,6 +35,12 @@ $hd-width: 2560px;
 
 @mixin hd {
   @media (min-width: #{$hd-width}) {
+    @content;
+  }
+}
+
+@mixin customMd {
+  @media (max-width: #{$md-width}) {
     @content;
   }
 }

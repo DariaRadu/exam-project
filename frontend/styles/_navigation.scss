@@ -12,6 +12,20 @@ nav{
             cursor:pointer;
         }
     }
+
+    .side-nav{
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        padding-top:5vh;
+        background-color:$babyPowder;
+    }
+
+    .nav-wrapper{
+        @include customMd{
+            background-color:$eerieBlack;
+        }
+    }
 }
 
 .nav-active{

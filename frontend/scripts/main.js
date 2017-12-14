@@ -10,6 +10,9 @@
     $('#modalUpdateStaff').modal();
     $('#modalRegisterPartner').modal();
     $('#modalUpdatePartner').modal();
+
+    //INITIALIZING SIDENAV
+    $(".button-collapse").sideNav();
 });
 
     const APIlink="http://localhost:3000";
