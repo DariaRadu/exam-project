@@ -232,4 +232,3 @@
             maintainAspectRatio: false
         }
     })
-});
