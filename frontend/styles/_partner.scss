@@ -1,0 +1,63 @@
+#submit_partner {
+    position: sticky;
+}
+
+
+#partnerBox {
+    display: flex;
+    align-items: center;
+}  
+
+
+
+#modalRegisterPartner {
+    /* label color */
+   .input-field label {
+    color: #000;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: $pastelBlue;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+
+  /* label focus color */
+  .input-field input[type=time]:focus + label {
+    color: $pastelBlue;
+  }
+  /* label underline focus color */
+  .input-field input[type=time]:focus {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+  /* valid color */
+  .input-field input[type=time].valid {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+
+  /* label focus color */
+  .input-field input[type=date]:focus + label {
+    color: $pastelBlue;
+  }
+  /* label underline focus color */
+  .input-field input[type=date]:focus {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+  /* valid color */
+  .input-field input[type=date].valid {
+    border-bottom: 1px solid $pastelBlue;
+    box-shadow: 0 1px 0 0 $pastelBlue;
+  }
+
+}

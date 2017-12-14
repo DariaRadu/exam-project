@@ -8,6 +8,9 @@
     $('#modalRegisterStaff').modal();
     $('#modalUpdateEvent').modal();
     $('#modalUpdateStaff').modal();
+    $('#modalRegisterPartner').modal();
+    $('#modalUpdatePartner').modal();
+});
 
     const APIlink="http://localhost:3000";
     const cloudinaryLink="http://res.cloudinary.com/id-exam/image/upload/";
