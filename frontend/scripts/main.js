@@ -231,5 +231,5 @@
             responsive:true,
             maintainAspectRatio: false
         }
-    })
-});
+    });
+

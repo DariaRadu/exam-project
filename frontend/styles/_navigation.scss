@@ -18,3 +18,18 @@ nav{
     border-top:7px solid $eerieBlack;
 }
 
+.settings {
+    overflow: hidden;
+    transition-duration: 1.5s;
+    transition-property: transform;
+    &:hover {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+
+    }
+}
+
+.logo {
+    padding-top: 0.8vh;
+}
+

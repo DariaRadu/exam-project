@@ -64,6 +64,17 @@ nav {
 .nav-active {
   border-top: 7px solid #12181e; }
 
+.settings {
+  overflow: hidden;
+  transition-duration: 1.5s;
+  transition-property: transform; }
+  .settings:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); }
+
+.logo {
+  padding-top: 0.8vh; }
+
 #filter-box {
   padding-top: 5vh; }
   #filter-box #box {
