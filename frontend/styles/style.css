@@ -210,6 +210,14 @@ nav {
   padding-top: 2vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr); }
+  #event-cards .card {
+    margin: 2vh; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #event-cards {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #event-cards {
+      grid-template-columns: 1fr; } }
   #event-cards img {
     height: 25vh;
     object-fit: cover; }

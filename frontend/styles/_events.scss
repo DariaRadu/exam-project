@@ -3,7 +3,18 @@
     margin:0 auto;
     padding-top:2vh;
     display:grid;
+    .card{
+        margin:2vh;
+    }
     grid-template-columns: repeat(3,1fr);
+    @include tablet{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @include phone{
+        grid-template-columns: 1fr;
+    }
+
     img{
         height:25vh;
         object-fit: cover;

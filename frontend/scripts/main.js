@@ -67,10 +67,10 @@
             console.log(navClicked);
         }
     }
-
     //MODAL - get the info of a particular event
     var modalEventDiv = document.querySelector('#modalEvent');
     function buttonEventModal(e){
+        initMap();
         var eventId = e.target.getAttribute('data-event');
         if(eventId){
             eventId=Number(eventId);
@@ -101,10 +101,17 @@
     //MAP
     var map;
     function initMap() {
-    map = new google.maps.Map(document.getElementById('mapEvent'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
-    });
+        var markerPosition={lat:55.706522, lng:12.539173}
+        map = new google.maps.Map(document.getElementById('mapEvent'), {
+            center: markerPosition,
+            zoom: 15
+        });
+
+        var marker = new google.maps.Marker({
+            position: markerPosition,
+            map: map,
+            title: 'Event Location'
+        });
     }
 
     //CREATING EVENT CARDS
@@ -221,13 +228,35 @@
                 label: "attended",
                 backgroundColor: '#12181e',
                 borderColor: '#A8CCCA',
-                data: [0, 10, 5, 2, 20, 30, 45]
+                data: [200, 100, 52,254, 245, 60, 90]
             },
             {
                 label: "registered",
                 backgroundColor: '#A8CCCA',
                 borderColor: '#12181e',
-                data: [0, 10, 5, 2, 20, 30, 50]
+                data: [210, 150, 70, 260, 250, 60, 94]
+            }]
+        },
+        options:{
+            responsive:true,
+            maintainAspectRatio: false
+        }
+    });
+
+    var ctxProfit = document.getElementById('profitChart').getContext('2d');
+    var profitChart = new Chart(ctxProfit, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [{
+                label: "Profit in DKK",
+                borderColor: '#12181e',
+                lineTension:0.2,
+                fill:false,
+                data: [0, 1000, 2500,4000, 5200, 6000, 9000]
             }]
         },
         options:{
