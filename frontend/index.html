@@ -567,9 +567,197 @@
             </div>
 
             <!-- PARTNERS PAGE -->
+
         <div id="partnersPage" class="page">
+            <section id="filter-box">
+                <div id="box">
+                    <div class="first-line">
+                        <div class="sort">
+                            <p>SORT BY:</p>
+                            <button class="btn btn-general btn-active">NAME</button>
+                            <button class="btn btn-general">TIME LENGTH</button>
+                            <button class="btn btn-general">INTERESTS</button>
+                        </div>
+                        <div class="search-box">
+                            <form>
+                                <div>
+                                    <i class="material-icons">search</i>
+                                    <input id="search-event" type="search" required>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="second-line">
+                        <div class="asc-desc">
+                            <div class="input-field">
+                                <select>
+                                    <option value="1" selected>Ascending</option>
+                                    <option value="2">Descending</option>
+                                </select>
+                            </div>
+                        </div>
+                            <div class="clear-filter">
+                                <p>CLEAR FILTER</p>
+                                <i class="material-icons cursor-pointer">cancel</i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 
+                <!-- Add new partner button -->
+                <div id="addPartnerOption" class='add-staff'>
+                    <a data-target="modalRegisterPartner" class="registering modal-trigger cursor-pointer" >
+                            REGISTER NEW PARTNERSHIP
+                            <i class="material-icons cursor-pointer">add_circle_outline</i>   
+                    </a>
+                </div>
+
+                <!--Skeleton template for Partners -->
+                <section id="partnerList">
+                        <div class='first-line'>
+                            <div class='box' id="partnerBox">
+                                <div>
+                                    <img class="profileIcons" src="photo/google.png">
+                                </div>
+                                <div>
+                                        <p>Name: Google</p>
+                                        <p>Website: www.google.com</p>
+                                </div>
+                                <div>
+                                    <p>Contact Person: Adam Jensen</p>
+                                    <p>Contact Email: Adsen@gmail.com</p>
+                                    <p>Phone Number: 511-524 55</p>
+                                </div>
+
+                                <div class="staff-buttons">
+                                    <a data-target="modalUpdatePartner" class="registering modal-trigger cursor-pointer" >
+                                        <i class="material-icons">edit</i>
+                                    </a>
+                                        <i class="material-icons">delete</i>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- Modal Register Partnership Form -->
+
+                <div id="modalRegisterPartner" class="modal modal-fixed-footer">
+                        <div class="modal-register-content">
+                            <h1 class='formHeading'>Register Partnership</h1>
+                                <div class="row staffrow">
+                                    <form class="col s12">
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="company_name" name="companyName" type="text" class="validate">
+                                                <label for="company_name">Company Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="contact_person" name="contactPerson" type="text" class="validate">
+                                                <label for="contact_person">Contact Person</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="contact_email" name="contactEmail" type="email" class="validate">
+                                                <label for="contact_email">Contact Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="company_phoneNumber" name="companyPhoneNumber" type="text" class="validate">
+                                                <label for="company_phoneNumber">Phone Number</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="company_website" type="text" name="companyWebsite" class="validate">
+                                                <label for="company_website">Website</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <p>Upload a company picture:</p>
+                                                <input type="file" name="profilePicture">
+                                            </div>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                                <div id="submit_partner" class="modal-footer">
+                                    <button type="button" class="btn-general btn-close-active modal-action modal-close waves-effect waves-green btn-flat">
+                                        <a>Close</a>
+                                    </button>
+                                    <button id="btnRegisterPartner" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
+                                        <a>Submit</a> 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Modal Updating Partnership -->
+
+                <div id="modalUpdatePartner" class="modal modal-fixed-footer">
+                        <div class="modal-register-content">
+                            <h1 class='formHeading'>Update Partnership Details</h1>
+                                <div class="row staffrow">
+                                    <form class="col s12">
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="company_name" name="companyName" type="text" class="validate">
+                                                <label for="company_name">Company Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="contact_person" name="contactPerson" type="text" class="validate">
+                                                <label for="contact_person">Contact Person</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="contact_email" name="contactEmail" type="email" class="validate">
+                                                <label for="contact_email">Contact Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="company_phoneNumber" name="companyPhoneNumber" type="text" class="validate">
+                                                <label for="company_phoneNumber">Phone Number</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="company_website" type="text" name="companyWebsite" class="validate">
+                                                <label for="company_website">Website</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <p>Upload a company picture:</p>
+                                                <input type="file" name="profilePicture">
+                                            </div>
+                                        </div>
+                                </form>
+                            </div>
+                            </div>
+                                <div id="submit_partner" class="modal-footer">
+                                    <button type="button" class="btn-general btn-close-active modal-action modal-close waves-effect waves-green btn-flat">
+                                        <a>Close</a>
+                                    </button>
+                                    <button id="btnUpdatePartner" type="button" class="btn-general modal-action modal-close waves-effect waves-green btn-flat " >
+                                        <a>Submit</a> 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
         </div>
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
 
             <!-- STATS PAGE -->
         <div id="statsPage" class="page">

@@ -8,6 +8,8 @@
     $('#modalRegisterStaff').modal();
     $('#modalUpdateEvent').modal();
     $('#modalUpdateStaff').modal();
+    $('#modalRegisterPartner').modal();
+    $('#modalUpdatePartner').modal();
 });
 
 const APIlink="http://localhost:3000";
